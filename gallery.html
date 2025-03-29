@@ -3,106 +3,106 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Browse the elegant photo gallery of Ichumma's Inn, a private homestay in Wayanad, Kerala." />
-    <meta name="keywords" content="Ichumma's Inn, Kerala homestay, Wayanad, gallery, private villa, elegant interiors" />
-    <meta name="author" content="Ichumma's Inn" />
-    <link rel="canonical" href="https://ichummas.com/gallery" />
-    <title>Gallery - Ichumma's Inn</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css" />
+    <meta name="description" content="Gallery of Ichumma's Inn – Explore the elegant interiors and scenic views of our homestay in Wayanad, Kerala." />
+    <meta name="keywords" content="Ichumma's Inn, Homestay, Wayanad, Kerala, Gallery, Interior Design, Architecture" />
+    <title>Gallery | Ichumma's Inn</title>
+    <link rel="canonical" href="https://ichummas.com/gallery.html" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-            },
-          },
-        },
-      }
-    </script>
     <style>
-      .gallery-img {
+      .image-wrapper img {
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
         transition: transform 0.3s ease;
       }
-      .gallery-img:hover {
-        transform: scale(1.05);
+      .image-wrapper img:hover {
+        transform: scale(1.03);
+      }
+      .caption {
+        text-align: center;
+        margin-top: 0.5rem;
+        font-size: 0.875rem;
+        color: #4b5563;
+      }
+      #lightbox {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+      }
+      #lightbox img {
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 10px;
+        box-shadow: 0 0 20px #fff;
       }
     </style>
   </head>
-  <body class="bg-white text-gray-900 font-sans">
+  <body class="bg-white text-gray-800">
     <div id="header"></div>
 
     <section class="max-w-7xl mx-auto px-4 py-12">
-      <h1 class="text-4xl font-bold mb-8 text-center">Our Gallery</h1>
-      <div id="lightgallery" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        <!-- Images -->
-        <a href="images/bedroom-1-side-table-view.webp" data-lg-size="1406-1390">
-          <img src="images/bedroom-1-side-table-view.webp" alt="Bedroom 1 side table view" class="w-full h-auto rounded-lg shadow gallery-img lazyload" loading="lazy" />
-        </a>
-        <a href="images/bedroom-2-cot-view.webp" data-lg-size="1406-1390">
-          <img src="images/bedroom-2-cot-view.webp" alt="Bedroom 2 cot view" class="w-full h-auto rounded-lg shadow gallery-img lazyload" loading="lazy" />
-        </a>
-        <a href="images/bedroom-2-side-table-view.webp" data-lg-size="1406-1390">
-          <img src="images/bedroom-2-side-table-view.webp" alt="Bedroom 2 side table view" class="w-full h-auto rounded-lg shadow gallery-img lazyload" loading="lazy" />
-        </a>
-        <a href="images/bedroom1-cot-view.webp" data-lg-size="1406-1390">
-          <img src="images/bedroom1-cot-view.webp" alt="Bedroom 1 cot view" class="w-full h-auto rounded-lg shadow gallery-img lazyload" loading="lazy" />
-        </a>
-        <a href="images/bedroom1-side-table-close-view.webp" data-lg-size="1406-1390">
-          <img src="images/bedroom1-side-table-close-view.webp" alt="Bedroom 1 side table close view" class="w-full h-auto rounded-lg shadow gallery-img lazyload" loading="lazy" />
-        </a>
-        <a href="images/dinning-hall-light-view.webp" data-lg-size="1406-1390">
-          <img src="images/dinning-hall-light-view.webp" alt="Dining hall light view" class="w-full h-auto rounded-lg shadow gallery-img lazyload" loading="lazy" />
-        </a>
-        <a href="images/dinning-table-full-view.webp" data-lg-size="1406-1390">
-          <img src="images/dinning-table-full-view.webp" alt="Dining table full view" class="w-full h-auto rounded-lg shadow gallery-img lazyload" loading="lazy" />
-        </a>
-        <a href="images/dinning-table-pots-view.webp" data-lg-size="1406-1390">
-          <img src="images/dinning-table-pots-view.webp" alt="Dining table pots view" class="w-full h-auto rounded-lg shadow gallery-img lazyload" loading="lazy" />
-        </a>
-        <a href="images/hall-bench-view.webp" data-lg-size="1406-1390">
-          <img src="images/hall-bench-view.webp" alt="Hall bench view" class="w-full h-auto rounded-lg shadow gallery-img lazyload" loading="lazy" />
-        </a>
-        <a href="images/hall-chair-view.webp" data-lg-size="1406-1390">
-          <img src="images/hall-chair-view.webp" alt="Hall chair view" class="w-full h-auto rounded-lg shadow gallery-img lazyload" loading="lazy" />
-        </a>
-        <a href="images/hero-arial.webp" data-lg-size="1406-1390">
-          <img src="images/hero-arial.webp" alt="Arial view of Ichumma's Inn" class="w-full h-auto rounded-lg shadow gallery-img lazyload" loading="lazy" />
-        </a>
-        <a href="images/hero-back.webp" data-lg-size="1406-1390">
-          <img src="images/hero-back.webp" alt="Back view of Ichumma's Inn" class="w-full h-auto rounded-lg shadow gallery-img lazyload" loading="lazy" />
-        </a>
-        <a href="images/hero-bedroom.webp" data-lg-size="1406-1390">
-          <img src="images/hero-bedroom.webp" alt="Bedroom view used in hero" class="w-full h-auto rounded-lg shadow gallery-img lazyload" loading="lazy" />
-        </a>
-        <a href="images/hero-dining-landscape.webp" data-lg-size="1406-1390">
-          <img src="images/hero-dining-landscape.webp" alt="Landscape dining view" class="w-full h-auto rounded-lg shadow gallery-img lazyload" loading="lazy" />
-        </a>
-        <a href="images/hero-dining.webp" data-lg-size="1406-1390">
-          <img src="images/hero-dining.webp" alt="Dining room view" class="w-full h-auto rounded-lg shadow gallery-img lazyload" loading="lazy" />
-        </a>
-      </div>
+      <h1 class="text-4xl font-bold text-center mb-8">Gallery</h1>
+      <div class="grid gallery grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
     </section>
 
+    <div id="lightbox"></div>
     <div id="footer"></div>
 
-    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
-      lightGallery(document.getElementById('lightgallery'), {
-        plugins: [lgZoom, lgThumbnail],
-        speed: 500,
-        download: false,
+      AOS.init();
+
+      const images = [
+        { src: 'images/bedroom-1-side-table-view.webp', caption: 'Bedroom with side table and window view' },
+        { src: 'images/bedroom-2-cot-view.webp', caption: 'Spacious bedroom with traditional cot' },
+        { src: 'images/bedroom-2-side-table-view.webp', caption: 'Cozy reading nook in Bedroom 2' },
+        { src: 'images/bedroom1-cot-view.webp', caption: 'Classic wooden cot in Bedroom 1' },
+        { src: 'images/bedroom1-side-table-close-view.webp', caption: 'Decorative side table arrangement' },
+        { src: 'images/dinning-hall-light-view.webp', caption: 'Dining hall lit with natural ambiance' },
+        { src: 'images/dinning-table-full-view.webp', caption: 'Spacious dining setup with clay pots' },
+        { src: 'images/dinning-table-pots-view.webp', caption: 'Traditional pots at dining table' },
+        { src: 'images/hall-bench-view.webp', caption: 'Heritage bench in hallway' },
+        { src: 'images/hall-chair-view.webp', caption: 'Elegant wooden chair with rustic charm' },
+        { src: 'images/hero-arial.webp', caption: 'Arial view of Ichumma's Inn' },
+        { src: 'images/hero-back.webp', caption: 'Backyard view of the homestay' },
+        { src: 'images/hero-bedroom.webp', caption: 'Bedroom corner used in our cover' },
+        { src: 'images/hero-dining-landscape.webp', caption: 'Wide view of the dining area' },
+        { src: 'images/hero-dining.webp', caption: 'Dining room filled with sunlight' }
+      ];
+
+      const gallerySection = document.querySelector('.gallery');
+      gallerySection.innerHTML = images
+        .map((img, index) => `
+          <div class="image-wrapper" data-aos="fade-up" data-aos-delay="${index * 50}">
+            <img src="${img.src}" alt="${img.caption}" loading="lazy" onclick="openLightbox('${img.src}')" />
+            <div class="caption">${img.caption}</div>
+          </div>
+        `)
+        .join('');
+
+      const lightbox = document.getElementById('lightbox');
+      function openLightbox(src) {
+        lightbox.innerHTML = `<img src="${src}" alt="Preview" />`;
+        lightbox.style.display = 'flex';
+      }
+      lightbox.addEventListener('click', () => {
+        lightbox.style.display = 'none';
       });
-    </script>
-    <script>
+
       fetch('header.html')
         .then(res => res.text())
         .then(data => {
           document.getElementById('header').innerHTML = data;
         });
+
       fetch('footer.html')
         .then(res => res.text())
         .then(data => {
