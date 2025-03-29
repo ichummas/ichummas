@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery – Ichumma's Inn</title>
+    <meta name="description" content="A visual tour of Ichumma's Inn — a beautiful private homestay in Wayanad, Kerala." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+      }
+      .fade-in.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-800 font-sans">
+
+    <!-- Header Loader -->
+    <div id="header-placeholder"></div>
+
+    <!-- Gallery Hero -->
+    <section class="text-center py-20 px-6 bg-teal-700 text-white">
+      <h1 class="text-4xl font-extrabold mb-4">Gallery</h1>
+      <p class="text-lg max-w-2xl mx-auto">
+        Explore the charm of Ichumma's Inn — where each corner tells a story.
+      </p>
+    </section>
+
+    <!-- Responsive Masonry Grid -->
+    <section class="py-16 px-4 max-w-7xl mx-auto">
+      <div class="columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4" id="gallery">
+
+        <!-- Sample Images (You can replace these with real ones) -->
+        <img src="https://source.unsplash.com/600x800/?kerala,home" alt="Kerala Home" class="w-full rounded-xl shadow-lg object-cover fade-in" loading="lazy">
+        <img src="https://source.unsplash.com/600x400/?nature" alt="Nature" class="w-full rounded-xl shadow-lg object-cover fade-in" loading="lazy">
+        <img src="https://source.unsplash.com/600x700/?homestay" alt="Homestay" class="w-full rounded-xl shadow-lg object-cover fade-in" loading="lazy">
+        <img src="https://source.unsplash.com/600x600/?interior,room" alt="Interior" class="w-full rounded-xl shadow-lg object-cover fade-in" loading="lazy">
+        <img src="https://source.unsplash.com/600x500/?campfire" alt="Campfire" class="w-full rounded-xl shadow-lg object-cover fade-in" loading="lazy">
+        <img src="https://source.unsplash.com/600x400/?pool" alt="Pool" class="w-full rounded-xl shadow-lg object-cover fade-in" loading="lazy">
+
+      </div>
+    </section>
+
+    <!-- Footer Loader -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+      // Header loader + nav
+      fetch('header.html')
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById('header-placeholder').innerHTML = data;
+
+          const menuToggle = document.getElementById('menu-toggle');
+          const mobileMenu = document.getElementById('mobile-menu');
+
+          if (menuToggle && mobileMenu) {
+            menuToggle.addEventListener('click', () => {
+              mobileMenu.classList.toggle('hidden');
+            });
+          }
+        });
+
+      // Footer loader
+      fetch('footer.html')
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById('footer-placeholder').innerHTML = data;
+        });
+
+      // Fade-in animation on scroll
+      const images = document.querySelectorAll('.fade-in');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      images.forEach(img => observer.observe(img));
+    </script>
+
+  </body>
+</html>
