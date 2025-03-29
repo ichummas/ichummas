@@ -1,33 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Explore the serene and elegant spaces of Ichumma's Inn through our curated gallery. Each image captures the tranquility and charm of our homestay in Wayanad, Kerala." />
+  <meta name="description" content="Gallery of Ichumma's Inn – a serene homestay in Wayanad. Explore elegant interiors, cozy bedrooms, and scenic views.">
+  <meta name="keywords" content="Ichumma's Inn, Wayanad Homestay, Kerala Nature Stay, Gallery">
   <title>Gallery | Ichumma's Inn</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/macy@2.5.1/dist/macy.min.css" />
-  <link rel="stylesheet" href="styles.css" />
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/macy@2.5.1/dist/macy.min.js"></script>
-  <script defer src="gallery.js"></script>
+  <link rel="canonical" href="https://ichummas.com/gallery.html" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .image-wrapper img {
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .image-wrapper img:hover {
+      transform: scale(1.03);
+    }
+    .caption {
+      text-align: center;
+      margin-top: 0.5rem;
+      font-size: 0.875rem;
+      color: #4b5563;
+    }
+    #lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    #lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #fff;
+    }
+  </style>
 </head>
-
 <body class="bg-white text-gray-800">
-  <div id="header"></div>
 
-  <main class="max-w-screen-xl mx-auto px-4 py-8">
-    <h1 class="text-3xl md:text-4xl font-semibold text-center mb-6">Gallery</h1>
-    <div id="gallery" class="masonry-gallery"></div>
+  <!-- Header -->
+  <div id="header-container"></div>
+
+  <!-- Main Gallery Section -->
+  <main class="max-w-7xl mx-auto px-4 py-12">
+    <h1 class="text-4xl font-bold text-center mb-8">Gallery</h1>
+    <div class="columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4 gallery"></div>
   </main>
 
-  <div id="footer"></div>
+  <!-- Lightbox -->
+  <div id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" alt="Full image preview" />
+  </div>
 
+  <!-- Footer -->
+  <div id="footer-container"></div>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
+
+    fetch('header.html')
+      .then(res => res.text())
+      .then(html => document.getElementById('header-container').innerHTML = html);
+
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(html => document.getElementById('footer-container').innerHTML = html);
+
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
   </script>
+  <script src="gallery.js" defer></script>
 </body>
-
 </html>
-
