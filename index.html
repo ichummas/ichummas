@@ -3,53 +3,68 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ichumma's Inn – Wayanad</title>
-    <meta name="description" content="A cozy homestay nestled in the heart of Wayanad, Kerala. Come experience comfort, nature, and heritage at Ichumma's Inn." />
+    <title>Ichumma's Inn – A Private Homestay in Wayanad, Kerala</title>
+    <meta name="description" content="A cozy private homestay nestled in the green heart of Wayanad, Kerala. Experience nature, comfort, and Kerala heritage at Ichumma's Inn." />
+    <meta name="keywords" content="Ichumma's Inn, Wayanad, Kerala, Homestay, Private villa, Vacation stay, Nature retreat" />
+    <meta name="author" content="Ichumma's Inn" />
+    <link rel="canonical" href="https://ichummas.com/" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .fade-slide {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        filter: blur(8px);
+        transition: opacity 1s ease, filter 1s ease;
+      }
+      .fade-slide.active {
+        opacity: 1;
+        filter: blur(0);
+        z-index: 10;
+      }
+    </style>
   </head>
   <body class="bg-white text-gray-800 font-sans">
-    
     <!-- Header Loader -->
     <div id="header-placeholder"></div>
 
     <script>
       fetch('header.html')
-	.then(res => res.text())
-	.then(data => {
-	  document.getElementById('header-placeholder').innerHTML = data;
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById('header-placeholder').innerHTML = data;
 
-	  // Wait for the content to be injected, then hook the event
-	  const menuToggle = document.getElementById('menu-toggle');
-	  const mobileMenu = document.getElementById('mobile-menu');
+          const menuToggle = document.getElementById('menu-toggle');
+          const mobileMenu = document.getElementById('mobile-menu');
 
-	  if (menuToggle && mobileMenu) {
-	    menuToggle.addEventListener('click', () => {
-	      mobileMenu.classList.toggle('hidden');
-	    });
-	  }
-	});
+          if (menuToggle && mobileMenu) {
+            menuToggle.addEventListener('click', () => {
+              mobileMenu.classList.toggle('hidden');
+            });
+          }
+        });
     </script>
 
-    <!-- Hero Section with Auto-Scrolling Background and Overlay Text -->
+    <!-- Hero Section with Blur Transition -->
     <section class="relative w-full h-[80vh] overflow-hidden text-white">
-      <!-- Carousel Track -->
-      <div class="absolute inset-0 flex transition-transform duration-[2000ms] ease-in-out" id="carousel-track">
-	<img src="images/hero-arial.webp" alt="Arial View" class="min-w-full object-cover h-full" />
-	<img src="images/hero-back.webp" alt="Back View" class="min-w-full object-cover h-full" />
-	<img src="images/hero-dining-landscape.webp" alt="Dining Area" class="min-w-full object-cover h-full" />
-	<img src="images/hero-bedroom.webp" alt="Bedroom" class="min-w-full object-cover h-full" />
-	<img src="images/hero-dining.webp" alt="Dining" class="min-w-full object-cover h-full" />
+      <!-- Images -->
+      <div class="absolute inset-0">
+        <img src="images/hero-arial.webp" alt="Arial View of Ichumma's Inn" class="fade-slide active object-cover w-full h-full" />
+        <img src="images/hero-back.webp" alt="Back View" class="fade-slide object-cover w-full h-full" />
+        <img src="images/hero-dining-landscape.webp" alt="Dining Area" class="fade-slide object-cover w-full h-full" />
+        <img src="images/hero-bedroom.webp" alt="Bedroom Interior" class="fade-slide object-cover w-full h-full" />
+        <img src="images/hero-dining.webp" alt="Dining Room" class="fade-slide object-cover w-full h-full" />
       </div>
 
       <!-- Overlay Content -->
-      <div class="relative z-10 h-full flex flex-col items-center justify-center bg-black/40 text-center px-4">
-	<h2 class="text-4xl md:text-5xl font-extrabold mb-4">Welcome to Ichumma's Inn</h2>
-	<p class="text-lg md:text-xl max-w-2xl mb-6">
-	  A peaceful getaway in the green hills of Wayanad. Feel at home surrounded by nature and Kerala’s rich traditions.
-	</p>
-	<a href="book.html" class="inline-block bg-white text-teal-700 font-semibold px-6 py-3 rounded-full hover:bg-gray-100 transition duration-300">
-	  Book Your Stay
-	</a>
+      <div class="relative z-20 h-full flex flex-col items-center justify-center bg-black/40 text-center px-4">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Welcome to Ichumma's Inn</h1>
+        <p class="text-lg md:text-xl max-w-2xl mb-6">
+          A peaceful getaway in the green hills of Wayanad. Feel at home surrounded by nature and Kerala’s rich traditions.
+        </p>
+        <a href="book.html" class="inline-block bg-white text-teal-700 font-semibold px-6 py-3 rounded-full hover:bg-gray-100 transition duration-300">
+          Book Your Stay
+        </a>
       </div>
     </section>
 
@@ -57,22 +72,21 @@
     <div id="footer-placeholder"></div>
 
     <script>
-
-      // Load footer
       fetch('footer.html')
-	.then(res => res.text())
-	.then(data => {
-	  document.getElementById('footer-placeholder').innerHTML = data;
-	});
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById('footer-placeholder').innerHTML = data;
+        });
 
+      const slides = document.querySelectorAll('.fade-slide');
       let currentIndex = 0;
-      const slides = document.querySelectorAll("#carousel-track img").length;
-      const track = document.getElementById("carousel-track");
 
       setInterval(() => {
-	currentIndex = (currentIndex + 1) % slides;
-	track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        slides[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % slides.length;
+        slides[currentIndex].classList.add('active');
       }, 4000);
     </script>
   </body>
 </html>
+
