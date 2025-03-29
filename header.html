@@ -1,0 +1,36 @@
+<header class="bg-white shadow-md sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+    <h1 class="text-xl font-bold text-teal-700">Ichumma's Inn</h1>
+    
+    <button id="menu-toggle" class="md:hidden text-teal-700 focus:outline-none text-2xl">
+      &#9776;
+    </button>
+
+    <nav id="nav-menu" class="hidden md:flex space-x-4">
+      <a href="index.html" class="text-gray-700 hover:text-teal-600">Home</a>
+      <a href="about.html" class="text-gray-700 hover:text-teal-600">About</a>
+      <a href="rooms.html" class="text-gray-700 hover:text-teal-600">Rooms</a>
+      <a href="gallery.html" class="text-gray-700 hover:text-teal-600">Gallery</a>
+      <a href="availability.html" class="text-gray-700 hover:text-teal-600">Availability</a>
+      <a href="contact.html" class="text-gray-700 hover:text-teal-600">Contact</a>
+    </nav>
+  </div>
+
+  <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+    <a href="index.html" class="block py-2 text-gray-700 hover:text-teal-600">Home</a>
+    <a href="about.html" class="block py-2 text-gray-700 hover:text-teal-600">About</a>
+    <a href="rooms.html" class="block py-2 text-gray-700 hover:text-teal-600">Rooms</a>
+    <a href="gallery.html" class="block py-2 text-gray-700 hover:text-teal-600">Gallery</a>
+    <a href="availability.html" class="block py-2 text-gray-700 hover:text-teal-600">Availability</a>
+    <a href="contact.html" class="block py-2 text-gray-700 hover:text-teal-600">Contact</a>
+  </div>
+</header>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
