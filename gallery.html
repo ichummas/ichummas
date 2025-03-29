@@ -1,108 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Elegant gallery of Ichumma's Inn with high-resolution images and lightbox previews. Explore the charm of our Wayanad homestay." />
-    <link rel="canonical" href="https://ichummas.com/gallery" />
-    <title>Gallery | Ichumma's Inn</title>
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      .fade-in {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-      }
-      .fade-in.show {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    </style>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore the serene beauty of Ichumma's Inn through our elegant photo gallery. View interiors, nature, and heritage details of this private homestay in Wayanad, Kerala." />
+  <meta name="keywords" content="Ichumma's Inn, Homestay, Kerala, Wayanad, Gallery, Interior, Travel, Vacation, South India" />
+  <meta name="author" content="Ichumma's Inn" />
+  <link rel="canonical" href="https://ichummas.com/gallery.html" />
+  <title>Gallery | Ichumma's Inn</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
 
-  <body class="bg-white text-gray-800">
-    <main class="max-w-7xl mx-auto px-4 py-10">
-      <h1 class="text-3xl md:text-4xl font-bold mb-8 text-center">
-        Photo Gallery
-      </h1>
+<body class="bg-white text-gray-900">
 
-      <div
-        id="lightgallery"
-        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
-      >
-        <!-- Image Blocks -->
-        <a
-          href="images/bedroom-1.webp"
-          class="fade-in"
-          data-lg-size="1600-1067"
-        >
-          <img
-            src="images/bedroom-1.webp"
-            alt="Spacious bedroom with natural light"
-            loading="lazy"
-            class="rounded-lg shadow-md w-full h-auto object-cover"
-          />
-        </a>
-        <a
-          href="images/side-table.webp"
-          class="fade-in"
-          data-lg-size="1600-1067"
-        >
-          <img
-            src="images/side-table.webp"
-            alt="Side table with books and lamp"
-            loading="lazy"
-            class="rounded-lg shadow-md w-full h-auto object-cover"
-          />
-        </a>
-        <a
-          href="images/dining-area.webp"
-          class="fade-in"
-          data-lg-size="1600-1067"
-        >
-          <img
-            src="images/dining-area.webp"
-            alt="Dining table set in open verandah"
-            loading="lazy"
-            class="rounded-lg shadow-md w-full h-auto object-cover"
-          />
-        </a>
-        <!-- Add more image blocks below -->
-      </div>
-    </main>
-
-    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script>
-    <script>
-      lightGallery(document.getElementById("lightgallery"), {
-        selector: "a",
-        plugins: [lgZoom],
-        zoom: true,
-        download: false,
-        actualSize: false,
+  <!-- Header -->
+  <div id="header"></div>
+  <script>
+    fetch("header.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("header").innerHTML = data;
       });
+  </script>
 
-      // Lazy animation trigger
-      const faders = document.querySelectorAll(".fade-in");
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("show");
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.1 }
-      );
+  <!-- Gallery Section -->
+  <section class="px-4 py-12 max-w-screen-xl mx-auto">
+    <h1 class="text-4xl font-bold text-center mb-8">Gallery</h1>
+    <div id="lightgallery" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <a href="images/bedroom1-cot-view.webp">
+        <img class="rounded-lg shadow-md transition duration-500 hover:scale-105 lazyload" loading="lazy" src="images/bedroom1-cot-view.webp" alt="Bedroom with vintage cot at Ichumma's Inn" />
+      </a>
+      <a href="images/bedroom1-side-table.webp">
+        <img class="rounded-lg shadow-md transition duration-500 hover:scale-105 lazyload" loading="lazy" src="images/bedroom1-side-table.webp" alt="Side table decor in Bedroom 1" />
+      </a>
+      <a href="images/bedroom2-cot-view.webp">
+        <img class="rounded-lg shadow-md transition duration-500 hover:scale-105 lazyload" loading="lazy" src="images/bedroom2-cot-view.webp" alt="Bedroom with high ceiling and cot" />
+      </a>
+      <a href="images/dining-full-view.webp">
+        <img class="rounded-lg shadow-md transition duration-500 hover:scale-105 lazyload" loading="lazy" src="images/dining-full-view.webp" alt="Dining area with terracotta lighting and window view" />
+      </a>
+      <a href="images/dining-close-pots.webp">
+        <img class="rounded-lg shadow-md transition duration-500 hover:scale-105 lazyload" loading="lazy" src="images/dining-close-pots.webp" alt="Clay pots on dining table" />
+      </a>
+      <a href="images/hall-bench-view.webp">
+        <img class="rounded-lg shadow-md transition duration-500 hover:scale-105 lazyload" loading="lazy" src="images/hall-bench-view.webp" alt="Heritage wooden bench in hall area" />
+      </a>
+    </div>
+  </section>
 
-      faders.forEach((el) => observer.observe(el));
-    </script>
-  </body>
+  <script>
+    lightGallery(document.getElementById("lightgallery"), {
+      plugins: [lgZoom, lgThumbnail],
+      speed: 500,
+      download: false
+    });
+  </script>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+  <script>
+    fetch("footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer").innerHTML = data;
+      });
+  </script>
+</body>
+
 </html>
-
