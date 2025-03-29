@@ -11,11 +11,22 @@
 
     <!-- Load header -->
     <div id="header-placeholder"></div>
+
     <script>
       fetch('header.html')
 	.then(res => res.text())
 	.then(data => {
 	  document.getElementById('header-placeholder').innerHTML = data;
+
+	  // Wait for the content to be injected, then hook the event
+	  const menuToggle = document.getElementById('menu-toggle');
+	  const mobileMenu = document.getElementById('mobile-menu');
+
+	  if (menuToggle && mobileMenu) {
+	    menuToggle.addEventListener('click', () => {
+	      mobileMenu.classList.toggle('hidden');
+	    });
+	  }
 	});
     </script>
 
