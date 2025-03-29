@@ -1,19 +1,19 @@
 <header class="bg-white shadow-md sticky top-0 z-50">
-  <div class="max-w-7xl mx-auto px-4 py-1 md:py-2 flex items-center justify-center md:justify-between">
+  <div class="max-w-7xl mx-auto px-4 py-1 md:py-2 flex items-center justify-center md:justify-between relative">
     <!-- Logo -->
-    <a href="index.html" class="flex items-center">
+    <a href="index.html" class="flex items-center mx-auto md:mx-0">
       <img
-        src="images/ichummas-logo-whitebg.webp"
-        alt="Ichumma's Inn Logo"
-        class="h-20 md:h-22 w-auto"
-        loading="lazy"
+	src="images/ichummas-logo-whitebg.webp"
+	alt="Ichumma's Inn Logo"
+	class="h-20 md:h-22 w-auto"
+	loading="lazy"
       />
     </a>
 
-    <!-- Mobile Toggle -->
+    <!-- Mobile Toggle Icon -->
     <button
       id="menu-toggle"
-      class="md:hidden text-teal-700 text-3xl focus:outline-none"
+      class="absolute right-4 top-1/2 -translate-y-1/2 md:hidden text-teal-700 text-3xl"
       aria-label="Toggle Menu"
     >
       &#9776;
@@ -29,7 +29,6 @@
       <a href="contact.html" class="text-gray-700 hover:text-teal-600">Contact</a>
     </nav>
   </div>
-
   <!-- Mobile Nav -->
   <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 text-center">
     <a href="index.html" class="block py-2 text-gray-700 hover:text-teal-600">Home</a>
