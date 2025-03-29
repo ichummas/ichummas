@@ -107,9 +107,21 @@
   <script>
     AOS.init();
 
-    fetch('header.html')
-      .then(res => res.text())
-      .then(html => document.getElementById('header-container').innerHTML = html);
+  fetch('header.html')
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById('header-container').innerHTML = html;
+
+      // Rebind the mobile menu toggle after injecting header
+      const menuToggle = document.getElementById('menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      if (menuToggle && mobileMenu) {
+	menuToggle.addEventListener('click', () => {
+	  mobileMenu.classList.toggle('hidden');
+	});
+      }
+    });
 
     fetch('footer.html')
       .then(res => res.text())
