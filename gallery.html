@@ -3,14 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gallery – Ichumma's Inn</title>
-    <meta name="description" content="A visual tour of Ichumma's Inn — a beautiful private homestay in Wayanad, Kerala." />
+    <meta name="description" content="Elegant gallery of Ichumma's Inn with high-resolution images and lightbox previews. Explore the charm of our Wayanad homestay." />
+    <link rel="canonical" href="https://ichummas.com/gallery" />
+    <title>Gallery | Ichumma's Inn</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       .fade-in {
         opacity: 0;
         transform: translateY(20px);
-        transition: opacity 0.6s ease, transform 0.6s ease;
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
       }
       .fade-in.show {
         opacity: 1;
@@ -18,73 +24,85 @@
       }
     </style>
   </head>
-  <body class="bg-white text-gray-800 font-sans">
 
-    <!-- Header Loader -->
-    <div id="header-placeholder"></div>
+  <body class="bg-white text-gray-800">
+    <main class="max-w-7xl mx-auto px-4 py-10">
+      <h1 class="text-3xl md:text-4xl font-bold mb-8 text-center">
+        Photo Gallery
+      </h1>
 
-    <!-- Gallery Hero -->
-    <section class="text-center py-20 px-6 bg-teal-700 text-white">
-      <h1 class="text-4xl font-extrabold mb-4">Gallery</h1>
-      <p class="text-lg max-w-2xl mx-auto">
-        Explore the charm of Ichumma's Inn — where each corner tells a story.
-      </p>
-    </section>
-
-    <!-- Responsive Masonry Grid -->
-    <section class="py-16 px-4 max-w-7xl mx-auto">
-      <div class="columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4" id="gallery">
-
-        <!-- Sample Images (You can replace these with real ones) -->
-        <img src="https://source.unsplash.com/600x800/?kerala,home" alt="Kerala Home" class="w-full rounded-xl shadow-lg object-cover fade-in" loading="lazy">
-        <img src="https://source.unsplash.com/600x400/?nature" alt="Nature" class="w-full rounded-xl shadow-lg object-cover fade-in" loading="lazy">
-        <img src="https://source.unsplash.com/600x700/?homestay" alt="Homestay" class="w-full rounded-xl shadow-lg object-cover fade-in" loading="lazy">
-        <img src="https://source.unsplash.com/600x600/?interior,room" alt="Interior" class="w-full rounded-xl shadow-lg object-cover fade-in" loading="lazy">
-        <img src="https://source.unsplash.com/600x500/?campfire" alt="Campfire" class="w-full rounded-xl shadow-lg object-cover fade-in" loading="lazy">
-        <img src="https://source.unsplash.com/600x400/?pool" alt="Pool" class="w-full rounded-xl shadow-lg object-cover fade-in" loading="lazy">
-
+      <div
+        id="lightgallery"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+      >
+        <!-- Image Blocks -->
+        <a
+          href="images/bedroom-1.webp"
+          class="fade-in"
+          data-lg-size="1600-1067"
+        >
+          <img
+            src="images/bedroom-1.webp"
+            alt="Spacious bedroom with natural light"
+            loading="lazy"
+            class="rounded-lg shadow-md w-full h-auto object-cover"
+          />
+        </a>
+        <a
+          href="images/side-table.webp"
+          class="fade-in"
+          data-lg-size="1600-1067"
+        >
+          <img
+            src="images/side-table.webp"
+            alt="Side table with books and lamp"
+            loading="lazy"
+            class="rounded-lg shadow-md w-full h-auto object-cover"
+          />
+        </a>
+        <a
+          href="images/dining-area.webp"
+          class="fade-in"
+          data-lg-size="1600-1067"
+        >
+          <img
+            src="images/dining-area.webp"
+            alt="Dining table set in open verandah"
+            loading="lazy"
+            class="rounded-lg shadow-md w-full h-auto object-cover"
+          />
+        </a>
+        <!-- Add more image blocks below -->
       </div>
-    </section>
+    </main>
 
-    <!-- Footer Loader -->
-    <div id="footer-placeholder"></div>
-
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script>
     <script>
-      // Header loader + nav
-      fetch('header.html')
-        .then(res => res.text())
-        .then(data => {
-          document.getElementById('header-placeholder').innerHTML = data;
+      lightGallery(document.getElementById("lightgallery"), {
+        selector: "a",
+        plugins: [lgZoom],
+        zoom: true,
+        download: false,
+        actualSize: false,
+      });
 
-          const menuToggle = document.getElementById('menu-toggle');
-          const mobileMenu = document.getElementById('mobile-menu');
+      // Lazy animation trigger
+      const faders = document.querySelectorAll(".fade-in");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("show");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
 
-          if (menuToggle && mobileMenu) {
-            menuToggle.addEventListener('click', () => {
-              mobileMenu.classList.toggle('hidden');
-            });
-          }
-        });
-
-      // Footer loader
-      fetch('footer.html')
-        .then(res => res.text())
-        .then(data => {
-          document.getElementById('footer-placeholder').innerHTML = data;
-        });
-
-      // Fade-in animation on scroll
-      const images = document.querySelectorAll('.fade-in');
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-          }
-        });
-      }, { threshold: 0.1 });
-
-      images.forEach(img => observer.observe(img));
+      faders.forEach((el) => observer.observe(el));
     </script>
-
   </body>
 </html>
+
