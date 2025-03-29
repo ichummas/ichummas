@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact & Booking – Ichumma's Inn</title>
+    <meta name="description" content="Reach out to Ichumma's Inn for availability, booking, or any questions about your stay in Wayanad." />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-white text-gray-800 font-sans">
+
+    <!-- Header Loader -->
+    <div id="header-placeholder"></div>
+
+    <!-- Contact Hero -->
+    <section class="text-center py-20 px-6 bg-teal-700 text-white">
+      <h1 class="text-4xl font-extrabold mb-4">Book Your Stay</h1>
+      <p class="text-lg max-w-2xl mx-auto">
+        Have a question or want to check availability? Reach out to us or send your request below — we’ll get back to you promptly.
+      </p>
+    </section>
+
+    <!-- Booking Form -->
+    <section class="py-16 px-6 max-w-3xl mx-auto">
+      <form action="https://formsubmit.co/info@ichummas.com" method="POST" class="space-y-6 bg-white p-6 rounded-lg shadow-md">
+
+        <div>
+          <label class="block mb-1 font-semibold" for="name">Name</label>
+          <input type="text" id="name" name="name" required class="w-full border border-gray-300 rounded px-4 py-2" />
+        </div>
+
+        <div>
+          <label class="block mb-1 font-semibold" for="email">Email</label>
+          <input type="email" id="email" name="email" required class="w-full border border-gray-300 rounded px-4 py-2" />
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-4">
+          <div class="flex-1">
+            <label class="block mb-1 font-semibold" for="checkin">Check-in</label>
+            <input type="date" id="checkin" name="checkin" required class="w-full border border-gray-300 rounded px-4 py-2" />
+          </div>
+          <div class="flex-1">
+            <label class="block mb-1 font-semibold" for="checkout">Check-out</label>
+            <input type="date" id="checkout" name="checkout" required class="w-full border border-gray-300 rounded px-4 py-2" />
+          </div>
+        </div>
+
+        <div>
+          <label class="block mb-1 font-semibold" for="guests">Number of Guests</label>
+          <input type="number" id="guests" name="guests" required min="1" max="10" class="w-full border border-gray-300 rounded px-4 py-2" />
+        </div>
+
+        <div>
+          <label class="block mb-1 font-semibold" for="message">Message</label>
+          <textarea id="message" name="message" rows="4" class="w-full border border-gray-300 rounded px-4 py-2"></textarea>
+        </div>
+
+        <!-- Anti-spam hidden field -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://ichummas.com/thank-you.html">
+
+        <button type="submit" class="bg-teal-700 text-white px-6 py-3 rounded hover:bg-teal-800 transition">
+          Send Booking Request
+        </button>
+      </form>
+    </section>
+
+    <!-- WhatsApp CTA -->
+    <section class="text-center px-6 py-12 bg-gray-50">
+      <h2 class="text-xl font-bold text-teal-700 mb-2">Prefer WhatsApp?</h2>
+      <p class="mb-4 text-gray-600">Chat with us directly on WhatsApp for quick queries or to book instantly.</p>
+      <a href="https://wa.me/919845158656" target="_blank" class="inline-block bg-teal-700 text-white px-6 py-3 rounded-full hover:bg-teal-800 transition">
+        Message on WhatsApp
+      </a>
+    </section>
+
+    <!-- Map Embed -->
+    <section class="text-center py-16 px-4">
+      <h3 class="text-2xl font-semibold text-teal-700 mb-4">Find Us in Wayanad</h3>
+      <div class="max-w-5xl mx-auto rounded-lg overflow-hidden shadow-md">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125320.09130491642!2d75.8881865!3d11.8120294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba5da21d82d4595%3A0xb503315a5579621b!2sIchumma%27s%20Inn!5e0!3m2!1sen!2sin!4v1711710000000!5m2!1sen!2sin"
+          width="100%" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          class="w-full">
+        </iframe>
+      </div>
+    </section>
+
+    <!-- Footer Loader -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+      // Load header
+      fetch('header.html')
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById('header-placeholder').innerHTML = data;
+
+          const menuToggle = document.getElementById('menu-toggle');
+          const mobileMenu = document.getElementById('mobile-menu');
+
+          if (menuToggle && mobileMenu) {
+            menuToggle.addEventListener('click', () => {
+              mobileMenu.classList.toggle('hidden');
+            });
+          }
+        });
+
+      // Load footer
+      fetch('footer.html')
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById('footer-placeholder').innerHTML = data;
+        });
+    </script>
+
+  </body>
+</html>
