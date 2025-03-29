@@ -5,12 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About – Ichumma's Inn</title>
   <meta name="description" content="The story of Ichumma's Inn – a private homestay in Wayanad offering comfort, nature, and complete privacy." />
+  <meta name="keywords" content="Ichumma's Inn, Wayanad homestay, private villa Kerala, Wayanad attractions, Kerala tourism" />
+  <meta name="author" content="Ichumma's Inn" />
+  <link rel="canonical" href="https://ichummas.com/about.html" />
+
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS Animations -->
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+  <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/ichummas-logo-transparent.png" type="image/png" />
+
+  <!-- Preload Hero & Attraction Images -->
+  <link rel="preload" as="image" href="images/hero-arial.webp" />
+  <link rel="preload" as="image" href="images/attractions/karapuzha-dam.webp" />
+  <link rel="preload" as="image" href="images/attractions/banasura-sagar.webp" />
+  <link rel="preload" as="image" href="images/attractions/edakkal-caves.webp" />
+  <link rel="preload" as="image" href="images/attractions/kuruva-island.webp" />
+  <link rel="preload" as="image" href="images/attractions/soochipara-waterfalls.webp" />
+  <link rel="preload" as="image" href="images/attractions/pookode-lake.webp" />
+
+  <!-- Social Sharing (Open Graph) -->
+  <meta property="og:title" content="About – Ichumma's Inn, Wayanad" />
+  <meta property="og:description" content="A private full-house homestay with serene views and nearby Wayanad attractions." />
+  <meta property="og:image" content="https://ichummas.com/images/hero-arial.webp" />
+  <meta property="og:url" content="https://ichummas.com/about.html" />
+  <meta name="twitter:card" content="summary_large_image" />
 </head>
 <body class="bg-white text-gray-800 font-sans">
 
@@ -91,30 +114,103 @@
     <div class="max-w-6xl mx-auto text-center">
       <h2 class="text-3xl font-bold text-teal-700 mb-10">Attractions Around Ichumma's Inn</h2>
       <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        <div class="rounded-lg overflow-hidden shadow-md">
-          <img src="images/attractions/karapuzha-dam.webp" alt="Karapuzha Dam" class="w-full h-64 object-cover" loading="lazy" />
-          <div class="p-4 text-lg font-medium text-gray-800">Karapuzha Dam</div>
-        </div>
-        <div class="rounded-lg overflow-hidden shadow-md">
-          <img src="images/attractions/banasura-sagar.webp" alt="Banasura Sagar Dam" class="w-full h-64 object-cover" loading="lazy" />
-          <div class="p-4 text-lg font-medium text-gray-800">Banasura Sagar Dam</div>
-        </div>
-        <div class="rounded-lg overflow-hidden shadow-md">
-          <img src="images/attractions/edakkal-caves.webp" alt="Edakkal Caves" class="w-full h-64 object-cover" loading="lazy" />
-          <div class="p-4 text-lg font-medium text-gray-800">Edakkal Caves</div>
-        </div>
-        <div class="rounded-lg overflow-hidden shadow-md">
-          <img src="images/attractions/kuruva-island.webp" alt="Kuruva Island" class="w-full h-64 object-cover" loading="lazy" />
-          <div class="p-4 text-lg font-medium text-gray-800">Kuruva Island</div>
-        </div>
-        <div class="rounded-lg overflow-hidden shadow-md">
-          <img src="images/attractions/soochipara-waterfalls.webp" alt="Soochipara Waterfalls" class="w-full h-64 object-cover" loading="lazy" />
-          <div class="p-4 text-lg font-medium text-gray-800">Soochipara Waterfalls</div>
-        </div>
-	<div class="rounded-lg overflow-hidden shadow-md">
-	  <img src="images/attractions/pookode-lake.webp" alt="Pookode Lake" class="w-full h-64 object-cover" loading="lazy" />
-	  <div class="p-4 text-lg font-medium text-gray-800">Pookode Lake</div>
-	</div>
+	
+	<!-- Karapuzha Dam -->
+	<a href="https://www.dtpcwayanad.com/destination/karapuzha-dam-wayanad" target="_blank" rel="noopener noreferrer"
+	   class="group relative block rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300" data-aos="fade-up">
+	  <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition duration-500 rounded-xl z-10 pointer-events-none"></div>
+	  <div class="absolute top-3 right-3 z-20 bg-white text-teal-600 rounded-full p-2 shadow-lg">
+	    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+	  </div>
+	  <img src="images/attractions/karapuzha-dam.webp" alt="Karapuzha Dam"
+	       class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+	  <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
+	  <div class="absolute bottom-4 left-4 z-20 text-left text-white">
+	    <div class="text-lg font-semibold">Karapuzha Dam</div>
+	    <p class="text-sm opacity-80">Scenic earth dam perfect for peaceful moments and photos.</p>
+	  </div>
+	</a>
+
+	<!-- Banasura Sagar Dam -->
+	<a href="https://www.dtpcwayanad.com/destination/banasura-sagar-dam-wayanad" target="_blank" rel="noopener noreferrer"
+	   class="group relative block rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="50">
+	  <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition duration-500 rounded-xl z-10 pointer-events-none"></div>
+	  <div class="absolute top-3 right-3 z-20 bg-white text-teal-600 rounded-full p-2 shadow-lg">
+	    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+	  </div>
+	  <img src="images/attractions/banasura-sagar.webp" alt="Banasura Sagar Dam"
+	       class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+	  <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
+	  <div class="absolute bottom-4 left-4 z-20 text-left text-white">
+	    <div class="text-lg font-semibold">Banasura Sagar Dam</div>
+	    <p class="text-sm opacity-80">India’s largest earthen dam, perfect for boating and hikes.</p>
+	  </div>
+	</a>
+
+	<!-- Edakkal Caves -->
+	<a href="https://www.dtpcwayanad.com/destination/edakkal-caves-wayanad" target="_blank" rel="noopener noreferrer"
+	   class="group relative block rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+	  <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition duration-500 rounded-xl z-10 pointer-events-none"></div>
+	  <div class="absolute top-3 right-3 z-20 bg-white text-teal-600 rounded-full p-2 shadow-lg">
+	    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+	  </div>
+	  <img src="images/attractions/edakkal-caves.webp" alt="Edakkal Caves"
+	       class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+	  <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
+	  <div class="absolute bottom-4 left-4 z-20 text-left text-white">
+	    <div class="text-lg font-semibold">Edakkal Caves</div>
+	    <p class="text-sm opacity-80">Prehistoric caves with ancient petroglyphs and scenic hikes.</p>
+	  </div>
+	</a>
+
+	<!-- Kuruva Island -->
+	<a href="https://www.dtpcwayanad.com/destination/kuruva-island-wayanad" target="_blank" rel="noopener noreferrer"
+	   class="group relative block rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="150">
+	  <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition duration-500 rounded-xl z-10 pointer-events-none"></div>
+	  <div class="absolute top-3 right-3 z-20 bg-white text-teal-600 rounded-full p-2 shadow-lg">
+	    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+	  </div>
+	  <img src="images/attractions/kuruva-island.webp" alt="Kuruva Island"
+	       class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+	  <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
+	  <div class="absolute bottom-4 left-4 z-20 text-left text-white">
+	    <div class="text-lg font-semibold">Kuruva Island</div>
+	    <p class="text-sm opacity-80">A river island with dense forest and bamboo rafting.</p>
+	  </div>
+	</a>
+
+	<!-- Soochipara Waterfalls -->
+	<a href="https://www.dtpcwayanad.com/destination/soochipara-waterfalls-wayanad" target="_blank" rel="noopener noreferrer"
+	   class="group relative block rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+	  <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition duration-500 rounded-xl z-10 pointer-events-none"></div>
+	  <div class="absolute top-3 right-3 z-20 bg-white text-teal-600 rounded-full p-2 shadow-lg">
+	    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+	  </div>
+	  <img src="images/attractions/soochipara-waterfalls.webp" alt="Soochipara Waterfalls"
+	       class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+	  <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
+	  <div class="absolute bottom-4 left-4 z-20 text-left text-white">
+	    <div class="text-lg font-semibold">Soochipara Waterfalls</div>
+	    <p class="text-sm opacity-80">Three-tiered falls in the forest, great for swimming and photos.</p>
+	  </div>
+	</a>
+
+	<!-- Pookode Lake -->
+	<a href="https://www.dtpcwayanad.com/destination/pookode-lake-wayanad" target="_blank" rel="noopener noreferrer"
+	   class="group relative block rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="250">
+	  <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition duration-500 rounded-xl z-10 pointer-events-none"></div>
+	  <div class="absolute top-3 right-3 z-20 bg-white text-teal-600 rounded-full p-2 shadow-lg">
+	    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+	  </div>
+	  <img src="images/attractions/pookode-lake.webp" alt="Pookode Lake"
+	       class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+	  <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
+	  <div class="absolute bottom-4 left-4 z-20 text-left text-white">
+	    <div class="text-lg font-semibold">Pookode Lake</div>
+	    <p class="text-sm opacity-80">A freshwater lake with pedal boats, ideal for family fun.</p>
+	  </div>
+	</a>
+
       </div>
     </div>
   </section>
@@ -141,6 +237,14 @@
       .then(data => {
         document.getElementById('footer-placeholder').innerHTML = data;
       });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      AOS.init({
+	once: true, // animations run once
+	duration: 800,
+      });
+    });
   </script>
 
 </body>
