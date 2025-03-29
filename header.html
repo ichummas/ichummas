@@ -1,26 +1,27 @@
 <header class="bg-white shadow-md sticky top-0 z-50">
-  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between md:justify-start">
-    <!-- Logo -->
-    <a href="index.html" class="flex-shrink-0">
-      <img
-        src="images/ichummas-logo-whitebg.webp"
-        alt="Ichumma's Inn Logo"
-        class="h-14 w-auto mx-auto md:mx-0"
-        loading="lazy"
-      />
-    </a>
-
-    <!-- Mobile Menu Toggle -->
-    <button
-      id="menu-toggle"
-      class="md:hidden ml-auto text-teal-700 text-3xl focus:outline-none"
-      aria-label="Toggle Menu"
-    >
-      &#9776;
-    </button>
+  <div class="max-w-7xl mx-auto px-4 py-4">
+    <!-- Logo centered on mobile -->
+    <div class="flex items-center justify-between md:justify-start">
+      <a href="index.html" class="w-full text-center md:w-auto md:text-left">
+        <img
+          src="images/ichummas-logo-whitebg.webp"
+          alt="Ichumma's Inn Logo"
+          class="h-16 w-auto mx-auto md:mx-0"
+          loading="lazy"
+        />
+      </a>
+      <!-- Mobile menu toggle -->
+      <button
+        id="menu-toggle"
+        class="md:hidden text-teal-700 text-3xl focus:outline-none"
+        aria-label="Toggle Menu"
+      >
+        &#9776;
+      </button>
+    </div>
 
     <!-- Desktop Menu -->
-    <nav id="nav-menu" class="hidden md:flex space-x-6 ml-auto">
+    <nav id="nav-menu" class="hidden md:flex justify-end space-x-6 mt-4 md:mt-0">
       <a href="index.html" class="text-gray-700 hover:text-teal-600">Home</a>
       <a href="about.html" class="text-gray-700 hover:text-teal-600">About</a>
       <a href="rooms.html" class="text-gray-700 hover:text-teal-600">Rooms</a>
@@ -28,16 +29,16 @@
       <a href="availability.html" class="text-gray-700 hover:text-teal-600">Availability</a>
       <a href="contact.html" class="text-gray-700 hover:text-teal-600">Contact</a>
     </nav>
-  </div>
 
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
-    <a href="index.html" class="block py-2 text-gray-700 hover:text-teal-600">Home</a>
-    <a href="about.html" class="block py-2 text-gray-700 hover:text-teal-600">About</a>
-    <a href="rooms.html" class="block py-2 text-gray-700 hover:text-teal-600">Rooms</a>
-    <a href="gallery.html" class="block py-2 text-gray-700 hover:text-teal-600">Gallery</a>
-    <a href="availability.html" class="block py-2 text-gray-700 hover:text-teal-600">Availability</a>
-    <a href="contact.html" class="block py-2 text-gray-700 hover:text-teal-600">Contact</a>
+    <!-- Mobile Menu (stacked below logo) -->
+    <div id="mobile-menu" class="md:hidden hidden mt-4 space-y-2 text-center">
+      <a href="index.html" class="block py-2 text-gray-700 hover:text-teal-600">Home</a>
+      <a href="about.html" class="block py-2 text-gray-700 hover:text-teal-600">About</a>
+      <a href="rooms.html" class="block py-2 text-gray-700 hover:text-teal-600">Rooms</a>
+      <a href="gallery.html" class="block py-2 text-gray-700 hover:text-teal-600">Gallery</a>
+      <a href="availability.html" class="block py-2 text-gray-700 hover:text-teal-600">Availability</a>
+      <a href="contact.html" class="block py-2 text-gray-700 hover:text-teal-600">Contact</a>
+    </div>
   </div>
 </header>
 
