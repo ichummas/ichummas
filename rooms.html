@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Stay – Ichumma's Inn</title>
+    <meta name="description" content="At Ichumma's Inn, you get the entire house to yourself — a 3-bedroom private retreat in Wayanad with all amenities." />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-white text-gray-800 font-sans">
+
+    <!-- Header Loader -->
+    <div id="header-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="text-center py-20 px-6 bg-teal-700 text-white">
+      <h1 class="text-4xl font-extrabold mb-4">Your Stay at Ichumma's Inn</h1>
+      <p class="text-lg max-w-2xl mx-auto">
+        When you book with us, you get the entire home — not just a room. Enjoy complete privacy, comfort, and space at our 3-bedroom homestay in the heart of Wayanad.
+      </p>
+    </section>
+
+    <!-- House Layout Overview -->
+    <section class="max-w-5xl mx-auto px-6 py-16">
+      <h2 class="text-2xl font-bold text-teal-700 mb-6 text-center">The Home You’ll Call Yours</h2>
+
+      <div class="grid md:grid-cols-3 gap-6 text-center">
+        <div class="bg-gray-50 rounded-xl shadow p-6">
+          <h3 class="text-xl font-semibold text-teal-700 mb-2">3 Cozy Bedrooms</h3>
+          <p class="text-gray-600">Spacious and airy with traditional touches and modern comfort. Perfect for families or friends.</p>
+        </div>
+        <div class="bg-gray-50 rounded-xl shadow p-6">
+          <h3 class="text-xl font-semibold text-teal-700 mb-2">Open Living & Dining</h3>
+          <p class="text-gray-600">Relax, eat, and connect in a warm space designed for togetherness.</p>
+        </div>
+        <div class="bg-gray-50 rounded-xl shadow p-6">
+          <h3 class="text-xl font-semibold text-teal-700 mb-2">Private Outdoors</h3>
+          <p class="text-gray-600">Lush open yard, campfire area, and total freedom. No other guests — it’s all yours.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Amenities Highlight -->
+    <section class="bg-gray-100 py-16 px-6">
+      <h2 class="text-2xl font-bold text-teal-700 text-center mb-8">What’s Included</h2>
+      <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto text-center">
+        <div>
+          <p class="text-4xl mb-2">🏊‍♂️</p>
+          <p class="font-semibold">Swimming Pool</p>
+        </div>
+        <div>
+          <p class="text-4xl mb-2">🏀</p>
+          <p class="font-semibold">Basketball Court</p>
+        </div>
+        <div>
+          <p class="text-4xl mb-2">🔥</p>
+          <p class="font-semibold">Campfire & Barbeque</p>
+        </div>
+        <div>
+          <p class="text-4xl mb-2">🍛</p>
+          <p class="font-semibold">Kerala Meals On Request</p>
+        </div>
+        <div>
+          <p class="text-4xl mb-2">📶</p>
+          <p class="font-semibold">Wi-Fi</p>
+        </div>
+        <div>
+          <p class="text-4xl mb-2">🛎️</p>
+          <p class="font-semibold">On-call Support</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="text-center py-16 px-6">
+      <h2 class="text-3xl font-bold text-teal-700 mb-4">Ready to Take Over the Whole House?</h2>
+      <p class="text-gray-600 mb-6">Perfect for family trips, friend getaways, or just escaping into nature. It’s your home, your way.</p>
+      <a href="availability.html" class="inline-block bg-teal-700 text-white px-8 py-3 rounded-full hover:bg-teal-800 transition">
+        Check Availability
+      </a>
+    </section>
+
+    <!-- Footer Loader -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+      // Load header
+      fetch('header.html')
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById('header-placeholder').innerHTML = data;
+
+          const menuToggle = document.getElementById('menu-toggle');
+          const mobileMenu = document.getElementById('mobile-menu');
+
+          if (menuToggle && mobileMenu) {
+            menuToggle.addEventListener('click', () => {
+              mobileMenu.classList.toggle('hidden');
+            });
+          }
+        });
+
+      // Load footer
+      fetch('footer.html')
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById('footer-placeholder').innerHTML = data;
+        });
+    </script>
+  </body>
+</html>
