@@ -42,9 +42,33 @@
       </a>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-100 text-center text-sm text-gray-600 py-6">
-      &copy; 2025 Ichumma's Inn · Wayanad, Kerala
-    </footer>
+    <!-- Footer Loader -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+      // Load header
+      fetch('header.html')
+	.then(res => res.text())
+	.then(data => {
+	  document.getElementById('header-placeholder').innerHTML = data;
+
+	  // Attach mobile toggle
+	  const menuToggle = document.getElementById('menu-toggle');
+	  const mobileMenu = document.getElementById('mobile-menu');
+
+	  if (menuToggle && mobileMenu) {
+	    menuToggle.addEventListener('click', () => {
+	      mobileMenu.classList.toggle('hidden');
+	    });
+	  }
+	});
+
+      // Load footer
+      fetch('footer.html')
+	.then(res => res.text())
+	.then(data => {
+	  document.getElementById('footer-placeholder').innerHTML = data;
+	});
+    </script>
   </body>
 </html>
