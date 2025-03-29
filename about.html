@@ -249,5 +249,38 @@
     });
   </script>
 
+  <!-- Floating Buttons -->
+  <!-- Scroll to Top -->
+  <button id="scrollToTopBtn"
+    class="fixed bottom-5 left-5 z-50 bg-gray-800 text-white p-3 rounded-full shadow-md hover:bg-gray-700 transition duration-300 hidden"
+    onclick="window.scrollTo({ top: 0, behavior: 'smooth' });"
+    aria-label="Scroll to top">
+    ↑
+  </button>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/919845158656?text=Hi%2C%20I%20am%20interested%20in%20Ichumma's%20Inn"
+    target="_blank" rel="noopener"
+    class="fixed bottom-5 right-5 z-50 bg-green-600 hover:bg-green-700 text-white p-4 rounded-full shadow-lg transition duration-300"
+    aria-label="Chat on WhatsApp">
+    <svg class="w-6 h-6 fill-current" viewBox="0 0 32 32">
+      <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.837 0.742 5.594 2.148 8.015l-2.148 7.985 8.206-2.156c2.315 1.252 4.923 1.922 7.794 1.922 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.563c-2.423 0-4.751-0.647-6.813-1.875l-0.486-0.281-4.875 1.281 1.313-4.766-0.302-0.491c-1.342-2.191-2.034-4.703-2.034-7.281 0-7.159 5.841-13 13-13s13 5.841 13 13c0 7.159-5.841 13-13 13zM22.719 19.313c-0.344-0.172-2.063-1.015-2.381-1.125-0.317-0.109-0.549-0.172-0.78 0.172-0.229 0.344-0.896 1.125-1.099 1.344-0.203 0.219-0.406 0.248-0.75 0.086-0.344-0.172-1.455-0.537-2.771-1.713-1.024-0.912-1.713-2.037-1.915-2.381-0.199-0.344-0.021-0.53 0.15-0.703 0.155-0.154 0.344-0.4 0.515-0.6 0.17-0.199 0.229-0.344 0.344-0.573 0.113-0.229 0.056-0.43-0.027-0.603-0.086-0.172-0.779-1.879-1.064-2.572-0.281-0.672-0.564-0.58-0.78-0.586-0.203-0.004-0.434-0.005-0.665-0.005s-0.603 0.086-0.919 0.43c-0.317 0.344-1.207 1.18-1.207 2.879s1.237 3.338 1.409 3.568c0.172 0.229 2.438 3.729 5.912 5.229 0.826 0.357 1.471 0.57 1.975 0.729 0.829 0.264 1.584 0.227 2.182 0.138 0.666-0.098 2.063-0.844 2.355-1.66 0.291-0.816 0.291-1.516 0.203-1.66-0.084-0.143-0.313-0.229-0.656-0.401z" />
+    </svg>
+  </a>
+
+  <!-- Scroll to Top Logic -->
+  <script>
+    const scrollBtn = document.getElementById('scrollToTopBtn');
+    let lastScrollY = window.scrollY;
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300 && window.scrollY < lastScrollY) {
+	scrollBtn.classList.remove('hidden');
+      } else {
+	scrollBtn.classList.add('hidden');
+      }
+      lastScrollY = window.scrollY;
+    });
+  </script>
 </body>
 </html>
