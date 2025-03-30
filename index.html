@@ -143,25 +143,24 @@
 
 	<!-- Gallery Card with Fade Slideshow -->
 	<div class="grid md:grid-cols-2 gap-8 items-center mb-16" data-aos="fade-left">
-	  <!-- Text First (Left Column on Desktop) -->
-	  <div class="md:order-1">
-	    <h3 class="text-2xl font-semibold text-teal-700 mb-2">Gallery</h3>
-	    <p class="text-gray-700 mb-4">
-	      Browse through snapshots of Ichumma’s Inn — from cozy bedrooms and welcoming halls to serene poolside views. 
-	      Discover the charm of Kerala’s hospitality captured in moments.
-	    </p>
-	    <a href="gallery.html" class="text-teal-600 font-semibold hover:underline">View Photos →</a>
-	  </div>
-
-	  <!-- Slideshow Image (Right Column on Desktop) -->
-	  <div class="relative w-full h-[520px] overflow-hidden rounded-lg shadow-md md:order-2">
+	  <!-- Slideshow Image (Right Column on Desktop, First on Mobile) -->
+	  <div class="relative w-full h-[520px] overflow-hidden rounded-lg shadow-md order-1 md:order-2">
 	    <div class="gallery-fade-slider absolute inset-0">
 	      <img src="images/hero-dining-landscape.webp" class="fade-slide-gallery active" alt="Dining Area" />
 	      <img src="images/bedroom1-cot-view.webp" class="fade-slide-gallery" alt="Bedroom View" />
 	      <img src="images/hall-chair-view.webp" class="fade-slide-gallery" alt="Hall View" />
-	      <img src="images/kitchen.webp" class="fade-slide-gallery" alt="Kitchen Area" />
 	      <img src="images/ichummas-inn.webp" class="fade-slide-gallery" alt="Ichumma's Inn Front" />
 	    </div>
+	  </div>
+
+	  <!-- Text Block (Left Column on Desktop, Second on Mobile) -->
+	  <div class="order-2 md:order-1">
+	    <h3 class="text-2xl font-semibold text-teal-700 mb-2">Gallery</h3>
+	    <p class="text-gray-700 mb-4">
+	      Browse through snapshots of Ichumma’s Inn — from cozy bedrooms and welcoming halls to serene poolside views.
+	      Discover the charm of Kerala’s hospitality captured in moments.
+	    </p>
+	    <a href="gallery.html" class="text-teal-600 font-semibold hover:underline">View Photos →</a>
 	  </div>
 	</div>
 
