@@ -12,6 +12,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <style>
+      html, body {
+	max-width: 100%;
+	overflow-x: hidden;
       .fade-slide {
         position: absolute;
         inset: 0;
@@ -47,7 +50,7 @@
     </style>
 
   </head>
-  <body class="bg-white text-gray-800 font-sans">
+  <body class="bg-white text-gray-800 font-sans overflow-x-hidden">
     <!-- Header Loader -->
     <div id="header-placeholder"></div>
 
@@ -144,7 +147,7 @@
 	<!-- Gallery Card with Fade Slideshow -->
 	<div class="grid md:grid-cols-2 gap-8 items-center mb-16" data-aos="fade-left">
 	  <!-- Slideshow Image (Right Column on Desktop, First on Mobile) -->
-	  <div class="relative w-full h-[520px] overflow-hidden rounded-lg shadow-md order-1 md:order-2">
+	  <div class="relative w-full h-[520px] overflow-hidden rounded-lg shadow-md order-1 md:order-2 transform transition-transform duration-500 hover:scale-105">
 	    <div class="gallery-fade-slider absolute inset-0">
 	      <img src="images/hero-dining-landscape.webp" class="fade-slide-gallery active" alt="Dining Area" />
 	      <img src="images/bedroom1-cot-view.webp" class="fade-slide-gallery" alt="Bedroom View" />
@@ -153,7 +156,7 @@
 	    </div>
 	  </div>
 
-	  <!-- Text Block (Left Column on Desktop, Second on Mobile) -->
+	  <!-- Text Block -->
 	  <div class="order-2 md:order-1">
 	    <h3 class="text-2xl font-semibold text-teal-700 mb-2">Gallery</h3>
 	    <p class="text-gray-700 mb-4">
