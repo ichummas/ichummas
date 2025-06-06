@@ -7,6 +7,8 @@
     <link rel="icon" type="image/png" href="images/favicon.ico" />
     <meta name="description" content="Reach out to Ichumma's Inn for availability, booking, or any questions about your stay in Wayanad." />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- ✅ reCAPTCHA script -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
 
   <!-- Google tag (gtag.js) -->
@@ -15,16 +17,12 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-K79DQK08K3');
   </script>
 
   <body class="bg-white text-gray-800 font-sans">
-
-    <!-- Header Loader -->
     <div id="header-placeholder"></div>
 
-    <!-- Contact Hero -->
     <section class="text-center py-20 px-6 bg-teal-700 text-white">
       <h1 class="text-4xl font-extrabold mb-4">Book Your Stay</h1>
       <p class="text-lg max-w-2xl mx-auto">
@@ -32,7 +30,6 @@
       </p>
     </section>
 
-    <!-- Booking Form -->
     <section class="py-16 px-6 max-w-3xl mx-auto">
       <form action="https://formsubmit.co/info@ichummas.com" method="POST" class="space-y-6 bg-white p-6 rounded-lg shadow-md">
 
@@ -44,6 +41,12 @@
         <div>
           <label class="block mb-1 font-semibold" for="email">Email</label>
           <input type="email" id="email" name="email" required class="w-full border border-gray-300 rounded px-4 py-2" />
+        </div>
+
+        <!-- ✅ Phone Number Field -->
+        <div>
+          <label class="block mb-1 font-semibold" for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" required placeholder="e.g. +91 9876543210" class="w-full border border-gray-300 rounded px-4 py-2" />
         </div>
 
         <div class="flex flex-col md:flex-row gap-4">
@@ -67,8 +70,10 @@
           <textarea id="message" name="message" rows="4" class="w-full border border-gray-300 rounded px-4 py-2"></textarea>
         </div>
 
-        <!-- Anti-spam hidden field -->
-        <input type="hidden" name="_captcha" value="false">
+        <!-- ✅ Google reCAPTCHA Widget -->
+        <div class="g-recaptcha" data-sitekey="6LeGxFcrAAAAAAwn8EjnvGv7NebzGBYzv0glAOVG"></div>
+
+        <input type="hidden" name="_captcha" value="false" />
         <input type="hidden" name="_next" value="https://ichummas.github.io/ichummas/thankyou.html" />
 
         <button type="submit" class="bg-teal-700 text-white px-6 py-3 rounded hover:bg-teal-800 transition">
@@ -77,7 +82,6 @@
       </form>
     </section>
 
-    <!-- WhatsApp CTA -->
     <section class="text-center px-6 py-12 bg-gray-50">
       <h2 class="text-xl font-bold text-teal-700 mb-2">Prefer WhatsApp?</h2>
       <p class="mb-4 text-gray-600">Chat with us directly on WhatsApp for quick queries or to book instantly.</p>
@@ -86,7 +90,6 @@
       </a>
     </section>
 
-    <!-- Map Embed -->
     <section class="text-center py-16 px-4">
       <h3 class="text-2xl font-semibold text-teal-700 mb-4">Find Us in Wayanad</h3>
       <div class="max-w-5xl mx-auto rounded-lg overflow-hidden shadow-md">
@@ -98,19 +101,15 @@
       </div>
     </section>
 
-    <!-- Footer Loader -->
     <div id="footer-placeholder"></div>
 
     <script>
-      // Load header
       fetch('header.html')
         .then(res => res.text())
         .then(data => {
           document.getElementById('header-placeholder').innerHTML = data;
-
           const menuToggle = document.getElementById('menu-toggle');
           const mobileMenu = document.getElementById('mobile-menu');
-
           if (menuToggle && mobileMenu) {
             menuToggle.addEventListener('click', () => {
               mobileMenu.classList.toggle('hidden');
@@ -118,7 +117,6 @@
           }
         });
 
-      // Load footer
       fetch('footer.html')
         .then(res => res.text())
         .then(data => {
@@ -126,12 +124,11 @@
         });
     </script>
 
-    <!-- Floating Home Button (Bottom Left) -->
     <a href="index.html"
        class="fixed bottom-5 left-5 z-40 bg-white border border-gray-300 text-gray-800 p-3 rounded-full shadow-md hover:bg-gray-100 transition duration-300"
        aria-label="Go to Home">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-	<path stroke-linecap="round" stroke-linejoin="round" d="M3 9.75L12 3l9 6.75M4.5 10.5v9a.75.75 0 00.75.75h4.5v-6h4.5v6h4.5a.75.75 0 00.75-.75v-9" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3 9.75L12 3l9 6.75M4.5 10.5v9a.75.75 0 00.75.75h4.5v-6h4.5v6h4.5a.75.75 0 00.75-.75v-9" />
       </svg>
     </a>
   </body>
