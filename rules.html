@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rules and Policies | Ichumma's Inn</title>
+  <meta name="description" content="Read the house rules, guest policies, and important guidelines before your stay at Ichumma's Inn." />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Header -->
+  <div id="header-placeholder"></div>
+  <script>
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header-placeholder").innerHTML = data;
+      });
+  </script>
+
+  <!-- Main Content -->
+  <main class="max-w-3xl mx-auto px-4 py-10">
+    <h1 class="text-3xl font-bold text-center mb-6">Rules and Policies</h1>
+    <p class="text-center text-gray-600 mb-10">Please take a moment to read through the guidelines to ensure a comfortable and memorable stay.</p>
+
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">1. General Rules</h2>
+      <ul class="list-disc ml-6 space-y-1">
+        <li>Only full-house bookings are allowed. No individual room bookings are available.</li>
+        <li>Maximum occupancy is limited to the number confirmed during booking.</li>
+        <li>Government-issued photo ID is required for all adult guests.</li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">2. Check-in & Check-out</h2>
+      <ul class="list-disc ml-6 space-y-1">
+        <li>Check-in time: 2:00 PM onwards</li>
+        <li>Check-out time: 11:00 AM</li>
+        <li>Early check-in or late check-out may be available upon prior request.</li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">3. House Rules</h2>
+      <ul class="list-disc ml-6 space-y-1">
+        <li>Please respect the peaceful surroundings and avoid loud noise after 10:00 PM.</li>
+        <li>Smoking is not permitted inside the house.</li>
+        <li>Pets are not allowed, unless explicitly approved prior to booking.</li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">4. Swimming Pool Guidelines</h2>
+      <ul class="list-disc ml-6 space-y-1">
+        <li>Pool usage is allowed between 7:00 AM and 9:00 PM.</li>
+        <li>Children must be supervised by adults at all times.</li>
+        <li>No diving or running near the pool area.</li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">5. Barbeque & Campfire Policies</h2>
+      <ul class="list-disc ml-6 space-y-1">
+        <li>Campfire and barbeque can be arranged upon request.</li>
+        <li>Guests are responsible for maintaining safety around fire sources.</li>
+        <li>Please inform the staff if you need assistance with lighting or setup.</li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">6. Visitors</h2>
+      <ul class="list-disc ml-6 space-y-1">
+        <li>Only registered guests are allowed to stay overnight.</li>
+        <li>Daytime visitors must be approved by the host in advance.</li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">7. Damages & Liability</h2>
+      <ul class="list-disc ml-6 space-y-1">
+        <li>Guests are liable for any damage caused to the property or items therein.</li>
+        <li>Please report any accidental damage immediately to the management.</li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">8. Cancellation Policy</h2>
+      <ul class="list-disc ml-6 space-y-1">
+        <li>Cancellations made 7 days prior to check-in are fully refundable.</li>
+        <li>No refund for cancellations within 7 days of the stay or for no-shows.</li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">9. Privacy Policy</h2>
+      <ul class="list-disc ml-6 space-y-1">
+        <li>Guest information will be used solely for booking and stay-related communication.</li>
+        <li>We do not share guest data with any third parties.</li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">10. Contact Us</h2>
+      <p>If you have any questions about our policies, feel free to <a href="contact.html" class="text-blue-600 underline">contact us</a>.</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 text-gray-600 text-center py-6 text-sm">
+    © <span id="year"></span> Ichumma’s Inn. All rights reserved.
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+
+</body>
+</html>
