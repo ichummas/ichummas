@@ -3,6 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      body { font-family: 'Inter', sans-serif; }
+      h1, h2, h3 { font-family: 'Playfair Display', serif; }
+    </style>
     <title>Availability &amp; Booking – Ichumma's Inn | Wayanad Homestay</title>
     <link rel="icon" type="image/png" href="images/favicon.png" />
     <meta name="description" content="Check real-time availability for Ichumma's Inn and Ichumma's Neo – two private full-house homestays in Wayanad, Kerala. Book your dates directly on Airbnb." />
@@ -81,11 +88,23 @@
 	});
     </script>
 
+    <!-- Hero Section -->
+    <section class="relative w-full h-[40vh] flex items-center justify-center overflow-hidden">
+      <img src="images/ichummas-inn.webp" alt="Ichumma's Inn Wayanad availability"
+        class="absolute inset-0 w-full h-full object-cover" loading="eager" />
+      <div class="absolute inset-0 bg-teal-900 bg-opacity-70"></div>
+      <div class="relative z-10 text-center text-white px-6">
+        <p class="text-sm uppercase tracking-widest text-teal-300 mb-3 font-medium">Real-time Calendar</p>
+        <h2 class="text-4xl md:text-5xl font-bold" style="font-family: 'Playfair Display', serif;">Check Availability</h2>
+        <p class="text-gray-200 mt-3 text-lg">Ichumma's Inn & Ichumma's Neo — Wayanad, Kerala</p>
+      </div>
+    </section>
+
     <!-- Availability Calendar Section -->
     <section class="py-16 px-6 bg-gray-50">
       <div class="max-w-6xl mx-auto">
         <div class="text-center mb-10">
-          <h1 class="text-4xl font-bold text-teal-700 mb-4">Check Availability – Ichumma's Inn & Neo, Wayanad</h1>
+          <h1 class="text-3xl font-bold text-teal-700 mb-4" style="font-family: 'Playfair Display', serif;">Check Availability – Ichumma's Inn & Neo, Wayanad</h1>
           <p class="text-gray-600 text-lg max-w-xl mx-auto mb-4">
             Check real-time availability for both our listings and book your stay through Airbnb.
           </p>

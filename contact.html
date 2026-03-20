@@ -3,6 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      body { font-family: 'Inter', sans-serif; }
+      h1, h2, h3 { font-family: 'Playfair Display', serif; }
+    </style>
     <title>Contact & Booking – Ichumma's Inn | Wayanad Homestay</title>
     <link rel="icon" type="image/png" href="images/favicon.ico" />
     <meta name="description" content="Contact Ichumma's Inn to check availability or make a booking. Reach us via WhatsApp, email, or the booking form for your Wayanad homestay stay." />
@@ -56,15 +63,19 @@
   <body class="bg-white text-gray-800 font-sans">
     <div id="header-placeholder"></div>
 
-    <section class="text-center py-20 px-6 bg-teal-700 text-white">
-      <h1 class="text-4xl font-extrabold mb-4">Contact & Book – Ichumma's Inn</h1>
-      <p class="text-lg max-w-2xl mx-auto">
-        Have a question or want to check availability? Reach out to us or send your request below — we’ll get back to you promptly.
-      </p>
+    <section class="relative w-full h-[45vh] flex items-center justify-center overflow-hidden">
+      <img src="images/hero-dining-landscape.webp" alt="Ichumma’s Inn Wayanad"
+        class="absolute inset-0 w-full h-full object-cover" loading="eager" />
+      <div class="absolute inset-0 bg-teal-900 bg-opacity-75"></div>
+      <div class="relative z-10 text-center text-white px-6 max-w-2xl mx-auto">
+        <p class="text-sm uppercase tracking-widest text-teal-300 mb-3 font-medium">Get in Touch</p>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4" style="font-family: ‘Playfair Display’, serif;">Contact & Book – Ichumma’s Inn</h1>
+        <p class="text-gray-200 text-lg">Have a question or want to check availability? We’d love to hear from you.</p>
+      </div>
     </section>
 
     <section class="py-16 px-6 max-w-3xl mx-auto">
-      <form action="https://formsubmit.co/info@ichummas.com" method="POST" class="space-y-6 bg-white p-6 rounded-lg shadow-md">
+      <form action="https://formsubmit.co/info@ichummas.com" method="POST" class="space-y-6 bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
 
         <!-- 🛡️ Honeypot Field (hidden to humans) -->
         <input type="text" name="_honey" style="display:none">
@@ -114,22 +125,27 @@
         <!-- ✅ Google reCAPTCHA checkbox -->
         <div class="g-recaptcha" data-sitekey="6LdW1lcrAAAAAO1JTUVocYAsvZ04vmrTRVKJwMUD"></div>
 
-        <button type="submit" class="bg-teal-700 text-white px-6 py-3 rounded hover:bg-teal-800 transition">
+        <button type="submit" class="w-full bg-teal-700 text-white px-6 py-4 rounded-xl hover:bg-teal-800 transition font-semibold text-lg tracking-wide shadow-md">
           Send Booking Request
         </button>
       </form>
     </section>
 
-    <section class="text-center px-6 py-12 bg-gray-50">
-      <h2 class="text-xl font-bold text-teal-700 mb-2">Prefer WhatsApp?</h2>
-      <p class="mb-4 text-gray-600">Chat with us directly on WhatsApp for quick queries or to book instantly.</p>
-      <a href="https://wa.me/919845158656" target="_blank" class="inline-block bg-teal-700 text-white px-6 py-3 rounded-full hover:bg-teal-800 transition">
-        Message on WhatsApp
-      </a>
+    <section class="text-center px-6 py-16 bg-teal-50">
+      <div class="max-w-md mx-auto">
+        <div class="text-4xl mb-4">💬</div>
+        <h2 class="text-2xl font-bold text-teal-700 mb-3" style="font-family: 'Playfair Display', serif;">Prefer WhatsApp?</h2>
+        <p class="mb-6 text-gray-600">Chat with us directly on WhatsApp for quick replies or to check group booking availability instantly.</p>
+        <a href="https://wa.me/919845158656" target="_blank"
+          class="inline-flex items-center gap-2 bg-green-600 text-white px-8 py-3 rounded-full hover:bg-green-700 transition font-semibold shadow-md">
+          <svg class="w-5 h-5 fill-white" viewBox="0 0 32 32"><path d="M16 0c-8.837 0-16 7.163-16 16 0 2.837 0.742 5.594 2.148 8.015l-2.148 7.985 8.206-2.156c2.315 1.252 4.923 1.922 7.794 1.922 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.563c-2.423 0-4.751-0.647-6.813-1.875l-0.486-0.281-4.875 1.281 1.313-4.766-0.302-0.491c-1.342-2.191-2.034-4.703-2.034-7.281 0-7.159 5.841-13 13-13s13 5.841 13 13c0 7.159-5.841 13-13 13z"/></svg>
+          Message on WhatsApp
+        </a>
+      </div>
     </section>
 
     <section class="text-center py-16 px-4">
-      <h3 class="text-2xl font-semibold text-teal-700 mb-4">Find Us in Wayanad</h3>
+      <h3 class="text-2xl font-semibold text-teal-700 mb-4" style="font-family: 'Playfair Display', serif;">Find Us in Wayanad</h3>
       <div class="max-w-5xl mx-auto rounded-lg overflow-hidden shadow-md">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125320.09130491642!2d75.8881865!3d11.8120294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba5da21d82d4595%3A0xb503315a5579621b!2sIchumma%27s%20Inn!5e0!3m2!1sen!2sin!4v1711710000000!5m2!1sen!2sin"
