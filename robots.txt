@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /book.html
+Disallow: /thankyou.html
+Disallow: /confirmation.html
+Sitemap: https://ichummas.com/sitemap.xml
