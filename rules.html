@@ -19,14 +19,21 @@
   <meta name="twitter:description" content="Guest policies, check-in times, pool usage, and other guidelines for your stay at Ichumma's Inn." />
   <meta name="twitter:image" content="https://ichummas.com/assets/preview.jpg" />
 
-  <!-- ✅ Favicon and App Icons -->
-  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-  <link rel="manifest" href="/site.webmanifest" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.ico" />
 
   <!-- ✅ Tailwind CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K79DQK08K3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-K79DQK08K3');
+</script>
 <body class="bg-white text-gray-800">
 
   <!-- Header -->
@@ -130,10 +137,10 @@
   <!-- Footer -->
   <div id="footer-placeholder"></div>
   <script>
-    fetch(‘footer.html’)
+    fetch("footer.html")
       .then(res => res.text())
       .then(data => {
-        document.getElementById(‘footer-placeholder’).innerHTML = data;
+        document.getElementById("footer-placeholder").innerHTML = data;
       });
   </script>
 
