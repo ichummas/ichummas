@@ -24,14 +24,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   gallerySection.innerHTML = images.map((img, index) => `
     <div class="image-wrapper" data-aos="fade-up" data-aos-delay="${index * 50}">
-      <img src="${img.src}" alt="${img.caption}" loading="lazy" onclick="openLightbox('${img.src}')" />
+      <img src="${img.src}" alt="${img.caption}" loading="lazy" onclick="openLightbox('${img.src}', '${img.caption.replace(/'/g, '&apos;')}')" />
       <div class="caption">${img.caption}</div>
     </div>
   `).join('');
 
   const lightbox = document.getElementById('lightbox');
-  window.openLightbox = (src) => {
-    lightbox.innerHTML = `<img src="${src}" alt="Preview" />`;
+  window.openLightbox = (src, caption = '') => {
+    lightbox.innerHTML = `<img src="${src}" alt="${caption}" />`;
     lightbox.style.display = 'flex';
   };
   lightbox.addEventListener('click', () => {
