@@ -7,6 +7,35 @@
     <link rel="icon" type="image/png" href="images/favicon.png" />
     <meta name="description" content="Check room availability at Ichumma's Inn in Wayanad. View real-time calendar and book your stay on Airbnb." />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.css" rel="stylesheet" />
+    <style>
+      .fc .fc-toolbar-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #0f766e;
+      }
+      .fc .fc-button-primary {
+        background-color: #0f766e !important;
+        border-color: #0f766e !important;
+      }
+      .fc .fc-button-primary:hover {
+        background-color: #115e59 !important;
+        border-color: #115e59 !important;
+      }
+      .fc-event {
+        background-color: #f87171 !important;
+        border-color: #ef4444 !important;
+        color: white !important;
+        font-size: 0.7rem;
+        cursor: default !important;
+      }
+      .fc-daygrid-day.fc-day-today {
+        background-color: #f0fdfa !important;
+      }
+      .fc-daygrid-day.fc-day-past {
+        opacity: 0.45;
+      }
+    </style>
   </head>
 
   <!-- Google tag (gtag.js) -->
@@ -42,17 +71,115 @@
 	});
     </script>
 
-    <!-- Availability CTA Section -->
-    <section class="text-center py-20 px-6 bg-gray-50">
-      <h2 class="text-4xl font-bold text-teal-700 mb-4">Availability & Booking</h2>
-      <p class="text-gray-600 text-lg max-w-xl mx-auto mb-8">
-        Our rooms fill up fast! Check real-time availability and reserve your peaceful stay at Ichumma's Inn through our Airbnb page.
-      </p>
-      <a href="https://www.airbnb.co.uk/rooms/23329072" target="_blank"
-        class="inline-block bg-teal-700 text-white font-semibold px-8 py-3 rounded-full hover:bg-teal-800 transition duration-300">
-        View Calendar on Airbnb
-      </a>
+    <!-- Availability Calendar Section -->
+    <section class="py-16 px-6 bg-gray-50">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-10">
+          <h2 class="text-4xl font-bold text-teal-700 mb-4">Availability & Booking</h2>
+          <p class="text-gray-600 text-lg max-w-xl mx-auto mb-4">
+            Check real-time availability for both our listings and book your stay through Airbnb.
+          </p>
+          <div class="flex items-center justify-center gap-6 text-sm text-gray-600">
+            <div class="flex items-center gap-2">
+              <span class="inline-block w-4 h-4 rounded bg-red-400"></span> Unavailable
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="inline-block w-4 h-4 rounded bg-white border border-gray-300"></span> Available
+            </div>
+          </div>
+        </div>
+
+        <!-- Two calendars side by side -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+          <!-- Ichumma's Inn -->
+          <div class="bg-white rounded-2xl shadow-md p-6">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-xl font-semibold text-teal-700">Ichumma's Inn</h3>
+              <a href="https://www.airbnb.co.uk/rooms/23329072" target="_blank"
+                class="text-sm bg-teal-700 text-white font-semibold px-4 py-2 rounded-full hover:bg-teal-800 transition duration-300">
+                Book Now
+              </a>
+            </div>
+            <div id="inn-loading" class="text-center py-12 text-gray-400 text-sm">Loading calendar...</div>
+            <div id="calendar-inn" class="hidden"></div>
+            <div id="inn-error" class="hidden text-center py-8 text-gray-400 text-sm">
+              Unable to load calendar. <a href="https://www.airbnb.co.uk/rooms/23329072" target="_blank" class="text-teal-600 underline">View on Airbnb</a>
+            </div>
+          </div>
+
+          <!-- Ichumma's Neo -->
+          <div class="bg-white rounded-2xl shadow-md p-6">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-xl font-semibold text-teal-700">Ichumma's Neo</h3>
+              <a href="https://www.airbnb.co.uk/rooms/1531066307044582330" target="_blank"
+                class="text-sm bg-teal-700 text-white font-semibold px-4 py-2 rounded-full hover:bg-teal-800 transition duration-300">
+                Book Now
+              </a>
+            </div>
+            <div id="neo-loading" class="text-center py-12 text-gray-400 text-sm">Loading calendar...</div>
+            <div id="calendar-neo" class="hidden"></div>
+            <div id="neo-error" class="hidden text-center py-8 text-gray-400 text-sm">
+              Unable to load calendar. <a href="https://www.airbnb.co.uk/rooms/1531066307044582330" target="_blank" class="text-teal-600 underline">View on Airbnb</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </section>
+
+    <!-- FullCalendar + iCal -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ical.js@1.5.0/build/ical.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/icalendar@6.1.15/index.global.min.js"></script>
+    <script>
+      function initCalendar({ calendarId, loadingId, errorId, icalUrl }) {
+        const calendarEl = document.getElementById(calendarId);
+        const loadingEl  = document.getElementById(loadingId);
+        const errorEl    = document.getElementById(errorId);
+
+        const calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: 'dayGridMonth',
+          headerToolbar: { left: 'prev,next today', center: 'title', right: '' },
+          height: 'auto',
+          firstDay: 1,
+          validRange: { start: new Date().toISOString().split('T')[0] },
+          eventInteractive: false,
+          events: {
+            url: icalUrl,
+            format: 'ics',
+            failure: function () {
+              loadingEl.classList.add('hidden');
+              calendarEl.classList.add('hidden');
+              errorEl.classList.remove('hidden');
+            }
+          },
+          loading: function (isLoading) {
+            if (!isLoading) {
+              loadingEl.classList.add('hidden');
+              calendarEl.classList.remove('hidden');
+            }
+          }
+        });
+
+        calendar.render();
+      }
+
+      document.addEventListener('DOMContentLoaded', function () {
+        initCalendar({
+          calendarId: 'calendar-inn',
+          loadingId:  'inn-loading',
+          errorId:    'inn-error',
+          icalUrl:    'calendars/inn.ics'
+        });
+        initCalendar({
+          calendarId: 'calendar-neo',
+          loadingId:  'neo-loading',
+          errorId:    'neo-error',
+          icalUrl:    'calendars/neo.ics'
+        });
+      });
+    </script>
 
     <!-- Footer Loader -->
     <div id="footer-placeholder"></div>

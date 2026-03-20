@@ -1,0 +1,33 @@
+name: Sync Airbnb Calendars
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'   # every 6 hours
+  workflow_dispatch:          # allow manual trigger from GitHub Actions tab
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Fetch Ichumma's Inn calendar
+        run: |
+          curl -s -L \
+            "https://www.airbnb.co.uk/calendar/ical/23329072.ics?t=342b7d0a7b8542ad9991ada3e8a05822" \
+            -o calendars/inn.ics
+
+      - name: Fetch Ichumma's Neo calendar
+        run: |
+          curl -s -L \
+            "https://www.airbnb.co.uk/calendar/ical/1531066307044582330.ics?t=dc62be30c22d4ee19a2940ecb19abd8c" \
+            -o calendars/neo.ics
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add calendars/inn.ics calendars/neo.ics
+          git diff --cached --quiet || git commit -m "chore: sync Airbnb calendars [skip ci]"
+          git push
