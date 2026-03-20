@@ -128,10 +128,14 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-gray-100 text-gray-600 text-center py-6 text-sm">
-    © <span id="year"></span> Ichumma’s Inn. All rights reserved.
-  </footer>
-  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch(‘footer.html’)
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById(‘footer-placeholder’).innerHTML = data;
+      });
+  </script>
 
 </body>
 </html>
