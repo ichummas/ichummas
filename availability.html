@@ -125,10 +125,17 @@
           <div class="bg-white rounded-2xl shadow-md p-6">
             <div class="flex items-center justify-between mb-4">
               <img src="images/ichummas-logo-transparent.png" alt="Ichumma's Inn" class="h-14 w-auto object-contain" />
-              <a href="https://www.airbnb.co.uk/rooms/23329072" target="_blank"
-                class="text-sm bg-teal-700 text-white font-semibold px-4 py-2 rounded-full hover:bg-teal-800 transition duration-300">
-                Book Now
-              </a>
+              <div class="flex items-center gap-2">
+                <button id="refresh-btn-inn" onclick="refreshCalendar('inn')" title="Refresh from Airbnb"
+                  class="text-sm text-teal-700 border border-teal-700 px-3 py-2 rounded-full hover:bg-teal-50 transition duration-300 flex items-center gap-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582M20 20v-5h-.581M5.273 9A8 8 0 1118.727 15"/></svg>
+                  Refresh
+                </button>
+                <a href="https://www.airbnb.co.uk/rooms/23329072" target="_blank"
+                  class="text-sm bg-teal-700 text-white font-semibold px-4 py-2 rounded-full hover:bg-teal-800 transition duration-300">
+                  Book Now
+                </a>
+              </div>
             </div>
             <div id="inn-loading" class="text-center py-12 text-gray-400 text-sm">Loading calendar...</div>
             <div id="calendar-inn" class="hidden"></div>
@@ -141,10 +148,17 @@
           <div class="bg-white rounded-2xl shadow-md p-6">
             <div class="flex items-center justify-between mb-4">
               <img src="images/ichummas-neo-logo-transparent.png" alt="Ichumma's Neo" class="h-14 w-auto object-contain" />
-              <a href="https://www.airbnb.co.uk/rooms/1531066307044582330" target="_blank"
-                class="text-sm bg-teal-700 text-white font-semibold px-4 py-2 rounded-full hover:bg-teal-800 transition duration-300">
-                Book Now
-              </a>
+              <div class="flex items-center gap-2">
+                <button id="refresh-btn-neo" onclick="refreshCalendar('neo')" title="Refresh from Airbnb"
+                  class="text-sm text-teal-700 border border-teal-700 px-3 py-2 rounded-full hover:bg-teal-50 transition duration-300 flex items-center gap-1">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582M20 20v-5h-.581M5.273 9A8 8 0 1118.727 15"/></svg>
+                  Refresh
+                </button>
+                <a href="https://www.airbnb.co.uk/rooms/1531066307044582330" target="_blank"
+                  class="text-sm bg-teal-700 text-white font-semibold px-4 py-2 rounded-full hover:bg-teal-800 transition duration-300">
+                  Book Now
+                </a>
+              </div>
             </div>
             <div id="neo-loading" class="text-center py-12 text-gray-400 text-sm">Loading calendar...</div>
             <div id="calendar-neo" class="hidden"></div>
@@ -175,7 +189,14 @@
     <script src="https://cdn.jsdelivr.net/npm/ical.js@1.5.0/build/ical.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/icalendar@6.1.15/index.global.min.js"></script>
     <script>
-      function initCalendar({ calendarId, loadingId, errorId, icalUrl }) {
+      const calendars = {};
+
+      const AIRBNB_ICAL_URLS = {
+        inn: 'https://www.airbnb.co.uk/calendar/ical/23329072.ics?t=342b7d0a7b8542ad9991ada3e8a05822',
+        neo: 'https://www.airbnb.co.uk/calendar/ical/1531066307044582330.ics?t=dc62be30c22d4ee19a2940ecb19abd8c'
+      };
+
+      function initCalendar({ key, calendarId, loadingId, errorId, icalUrl }) {
         const calendarEl = document.getElementById(calendarId);
         const loadingEl  = document.getElementById(loadingId);
         const errorEl    = document.getElementById(errorId);
@@ -205,16 +226,58 @@
         });
 
         calendar.render();
+        calendars[key] = calendar;
+      }
+
+      function refreshCalendar(key) {
+        const cal = calendars[key];
+        if (!cal) return;
+
+        const btn = document.getElementById('refresh-btn-' + key);
+        if (btn) {
+          btn.disabled = true;
+          btn.classList.add('opacity-50');
+          btn.querySelector('svg').classList.add('animate-spin');
+        }
+
+        const proxyUrl = 'https://corsproxy.io/?' + encodeURIComponent(AIRBNB_ICAL_URLS[key]);
+
+        cal.getEventSources().forEach(s => s.remove());
+        cal.addEventSource({
+          url: proxyUrl,
+          format: 'ics',
+          failure: function () {
+            if (btn) {
+              btn.disabled = false;
+              btn.classList.remove('opacity-50');
+              btn.querySelector('svg').classList.remove('animate-spin');
+            }
+            alert('Could not reach Airbnb. Please try again shortly.');
+          }
+        });
+
+        // Re-enable button once loading finishes
+        const orig = cal.getOption('loading');
+        cal.setOption('loading', function (isLoading) {
+          if (orig) orig(isLoading);
+          if (!isLoading && btn) {
+            btn.disabled = false;
+            btn.classList.remove('opacity-50');
+            btn.querySelector('svg').classList.remove('animate-spin');
+          }
+        });
       }
 
       document.addEventListener('DOMContentLoaded', function () {
         initCalendar({
+          key:        'inn',
           calendarId: 'calendar-inn',
           loadingId:  'inn-loading',
           errorId:    'inn-error',
           icalUrl:    'calendars/inn.ics'
         });
         initCalendar({
+          key:        'neo',
           calendarId: 'calendar-neo',
           loadingId:  'neo-loading',
           errorId:    'neo-error',
