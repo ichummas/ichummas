@@ -3,46 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Browse the photo gallery of Ichumma's Inn – a private homestay in Wayanad, Kerala. Explore interiors, bedrooms, swimming pool, campfire and scenic views.">
-  <meta name="keywords" content="Ichumma's Inn, Wayanad Homestay, Kerala Nature Stay, Gallery">
-  <title>Gallery – Ichumma's Inn | Photos of Our Wayanad Homestay</title>
+  <meta name="description" content="Browse photos and videos of Ichumma's Inn and Ichumma's Neo – two private homestays in Wayanad, Kerala. Pool, bedrooms, interiors and scenic surroundings.">
+  <meta name="keywords" content="Ichumma's Inn, Ichumma's Neo, Wayanad Homestay, Kerala Nature Stay, Gallery">
+  <title>Gallery – Ichumma's Inn & Neo | Photos of Our Wayanad Homestays</title>
   <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
   <link rel="canonical" href="https://ichummas.com/gallery.html" />
-  <meta property="og:title" content="Gallery – Ichumma's Inn | Photos of Our Wayanad Homestay" />
-  <meta property="og:description" content="Browse photos of Ichumma's Inn – our rooms, pool, campfire area, surroundings and more in beautiful Wayanad, Kerala." />
+  <meta property="og:title" content="Gallery – Ichumma's Inn & Neo | Photos of Our Wayanad Homestays" />
+  <meta property="og:description" content="Browse photos of Ichumma's Inn and Ichumma's Neo – rooms, pools, campfire areas, and more in beautiful Wayanad, Kerala." />
   <meta property="og:image" content="https://ichummas.com/images/hero-arial.webp" />
   <meta property="og:url" content="https://ichummas.com/gallery.html" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Gallery – Ichumma's Inn | Photos of Our Wayanad Homestay" />
-  <meta name="twitter:description" content="Browse photos of Ichumma's Inn – our rooms, pool, campfire area, surroundings and more in beautiful Wayanad, Kerala." />
+  <meta name="twitter:title" content="Gallery – Ichumma's Inn & Neo | Photos of Our Wayanad Homestays" />
+  <meta name="twitter:description" content="Browse photos of Ichumma's Inn and Ichumma's Neo – rooms, pools, campfire areas, and more in beautiful Wayanad, Kerala." />
   <meta name="twitter:image" content="https://ichummas.com/images/hero-arial.webp" />
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "ImageGallery",
-  "name": "Ichumma's Inn Photo Gallery",
+  "name": "Ichumma's Inn & Neo Photo Gallery",
   "url": "https://ichummas.com/gallery.html",
-  "description": "Photos of Ichumma's Inn – rooms, swimming pool, campfire area, basketball court and scenic Wayanad surroundings.",
+  "description": "Photos of Ichumma's Inn and Ichumma's Neo – rooms, swimming pools, campfire areas and scenic Wayanad surroundings.",
   "author": {
     "@type": "Organization",
-    "name": "Ichumma's Inn",
+    "name": "Ichumma's Homestays",
     "url": "https://ichummas.com/"
   }
 }
 </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3 { font-family: 'Playfair Display', serif; }
     .image-wrapper img {
       border-radius: 0.5rem;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
       cursor: pointer;
       transition: transform 0.3s ease;
     }
-    .image-wrapper img:hover {
-      transform: scale(1.03);
-    }
+    .image-wrapper img:hover { transform: scale(1.03); }
     .caption {
       text-align: center;
       margin-top: 0.5rem;
@@ -50,22 +53,22 @@
       color: #4b5563;
     }
     #lightbox {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.8);
+      position: fixed; top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.85);
       display: none;
       justify-content: center;
       align-items: center;
       z-index: 9999;
     }
     #lightbox img {
-      max-width: 90%;
-      max-height: 90%;
+      max-width: 90%; max-height: 90%;
       border-radius: 10px;
-      box-shadow: 0 0 20px #fff;
+      box-shadow: 0 0 30px rgba(255,255,255,0.2);
+    }
+    .tab-btn.active {
+      background-color: #0f766e;
+      color: white;
     }
   </style>
 </head>
@@ -76,7 +79,6 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-K79DQK08K3');
   </script>
 
@@ -86,65 +88,135 @@
   <div id="header-container"></div>
 
   <!-- Hero Section -->
-  <section class="relative w-full h-[60vh] md:h-[75vh] lg:h-[85vh] flex items-center justify-center bg-black text-white overflow-hidden">
-    <div class="absolute inset-0 flex items-center justify-center">
-      <img src="images/hero-arial.webp" alt="Arial view of Ichumma's Inn homestay"
-	class="w-full h-full object-cover md:object-contain" loading="eager" />
+  <section class="relative w-full h-[60vh] md:h-[70vh] flex items-center justify-center bg-black text-white overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="images/hero-arial.webp" alt="Arial view of Ichumma's homestays in Wayanad"
+        class="w-full h-full object-cover md:object-contain" loading="eager" />
     </div>
-    <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+    <div class="absolute inset-0 bg-black bg-opacity-55"></div>
     <div class="relative z-10 text-center px-6 md:px-12">
-      <h1 class="text-3xl md:text-5xl font-bold mb-4 drop-shadow-xl">Photo Gallery – Ichumma's Inn, Wayanad</h1>
-      <p class="text-base md:text-lg max-w-2xl mx-auto drop-shadow">
-	Explore our gallery — elegant interiors, cozy bedrooms, and a warm Kerala welcome await.
+      <h1 class="text-3xl md:text-5xl font-bold mb-4 drop-shadow-xl">Photo Gallery</h1>
+      <p class="text-base md:text-lg max-w-2xl mx-auto drop-shadow text-teal-200 font-medium">
+        Ichumma's Inn &amp; Ichumma's Neo — Wayanad, Kerala
       </p>
     </div>
   </section>
 
-  <!-- Main Gallery Section -->
-  <main class="max-w-7xl mx-auto px-4 py-12">
-    <h2 class="text-4xl font-bold text-center mb-8">Rooms, Pool & Surroundings</h2>
-    <div class="columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4 gallery"></div>
-  </main>
-
-  <!-- Lightbox -->
-  <div id="lightbox" onclick="closeLightbox()">
-    <img id="lightbox-img" alt="Full image preview" />
+  <!-- Tab Navigation -->
+  <div class="sticky top-0 z-40 bg-white border-b border-gray-100 shadow-sm">
+    <div class="max-w-4xl mx-auto px-4 py-3 flex gap-3 justify-center">
+      <a href="#inn"
+        class="tab-btn active text-sm font-semibold px-6 py-2 rounded-full border border-teal-700 text-teal-700 transition duration-200 hover:bg-teal-700 hover:text-white"
+        onclick="setTab('inn')">
+        Ichumma's Inn
+      </a>
+      <a href="#neo"
+        class="tab-btn text-sm font-semibold px-6 py-2 rounded-full border border-teal-700 text-teal-700 transition duration-200 hover:bg-teal-700 hover:text-white"
+        onclick="setTab('neo')">
+        Ichumma's Neo
+      </a>
+    </div>
   </div>
 
-  <!-- Video Showcase Section -->
-  <section class="bg-gray-100 text-gray-800 py-20 px-4">
-    <div class="max-w-6xl mx-auto text-center">
-      <h2 class="text-3xl md:text-4xl font-bold text-teal-700 mb-6">A Glimpse Into Ichumma's Inn</h2>
-      <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-	Watch the space come alive through sights and sounds — from cozy corners to serene surroundings.
-      </p>
-      <div class="relative rounded-xl overflow-hidden shadow-xl max-w-5xl mx-auto" style="padding-top: 56.25%;">
-	<iframe class="absolute top-0 left-0 w-full h-full"
-	  src="https://www.youtube.com/embed/_cBz6pdANmA?rel=0&modestbranding=1&showinfo=0"
-	  title="Ichumma's Inn Walkthrough Video"
-	  frameborder="0"
-	  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-	  allowfullscreen>
-	</iframe>
+  <!-- ===================== INN SECTION ===================== -->
+  <section id="inn" class="pt-14 pb-4">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center gap-4 mb-8">
+        <img src="images/ichummas-logo-transparent.png" alt="Ichumma's Inn" class="h-14 w-auto object-contain" />
+        <div>
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800">Ichumma's Inn</h2>
+          <p class="text-sm text-gray-500">3 Bedrooms · Up to 15 Guests · Private Pool</p>
+        </div>
+      </div>
+      <!-- Inn Photo Grid -->
+      <div class="columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4 gallery-inn"></div>
+    </div>
+  </section>
+
+  <!-- Inn Video -->
+  <section class="bg-gray-50 py-16 px-4 mt-10">
+    <div class="max-w-5xl mx-auto text-center">
+      <h3 class="text-2xl md:text-3xl font-bold text-teal-700 mb-3">A Glimpse Into Ichumma's Inn</h3>
+      <p class="text-gray-500 mb-8 text-sm max-w-xl mx-auto">Watch the space come alive — from cozy corners to serene Wayanad surroundings.</p>
+      <div class="relative rounded-xl overflow-hidden shadow-xl" style="padding-top:56.25%;">
+        <iframe class="absolute top-0 left-0 w-full h-full"
+          src="https://www.youtube.com/embed/_cBz6pdANmA?rel=0&modestbranding=1&showinfo=0"
+          title="Ichumma's Inn Walkthrough Video"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div class="mt-8">
+        <a href="https://www.airbnb.co.uk/rooms/23329072" target="_blank"
+          class="inline-block bg-teal-700 hover:bg-teal-800 text-white font-semibold px-8 py-3 rounded-full transition duration-300">
+          Book Ichumma's Inn on Airbnb
+        </a>
       </div>
     </div>
   </section>
 
+  <!-- ===================== NEO SECTION ===================== -->
+  <section id="neo" class="pt-14 pb-4 mt-10">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center gap-4 mb-8">
+        <img src="images/ichummas-neo-logo-transparent.png" alt="Ichumma's Neo" class="h-14 w-auto object-contain" />
+        <div>
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800">Ichumma's Neo</h2>
+          <p class="text-sm text-gray-500">4 Bedrooms · Up to 25 Guests · Private Pool · 2 Floors</p>
+        </div>
+      </div>
+      <!-- Neo Photo Grid -->
+      <div class="columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4 gallery-neo"></div>
+    </div>
+  </section>
+
+  <!-- Neo Videos -->
+  <section class="bg-gray-50 py-16 px-4 mt-10">
+    <div class="max-w-5xl mx-auto text-center">
+      <h3 class="text-2xl md:text-3xl font-bold text-teal-700 mb-3">A Glimpse Into Ichumma's Neo</h3>
+      <p class="text-gray-500 mb-8 text-sm max-w-xl mx-auto">Explore our modern two-floor villa — pool, interiors, and lush Wayanad greenery.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="relative rounded-xl overflow-hidden shadow-xl bg-black" style="padding-top:56.25%;">
+          <video class="absolute top-0 left-0 w-full h-full object-cover" controls preload="none"
+            poster="images/Neo/neo-pool-jungle-view.webp">
+            <source src="images/Neo/neo-walkthrough-1.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="relative rounded-xl overflow-hidden shadow-xl bg-black" style="padding-top:56.25%;">
+          <video class="absolute top-0 left-0 w-full h-full object-cover" controls preload="none"
+            poster="images/Neo/neo-entrance-porch.webp">
+            <source src="images/Neo/neo-walkthrough-2.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+      <div class="mt-8">
+        <a href="https://www.airbnb.co.uk/rooms/1531066307044582330" target="_blank"
+          class="inline-block bg-teal-700 hover:bg-teal-800 text-white font-semibold px-8 py-3 rounded-full transition duration-300">
+          Book Ichumma's Neo on Airbnb
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox" onclick="closeLightbox()"></div>
+
   <!-- WhatsApp Contact Button -->
-  <div class="flex justify-center mt-16 mb-24 px-4">
-    <a href="https://wa.me/919845158656?text=Hi%2C%20I%20loved%20the%20pictures%20of%20Ichumma's%20Inn%20and%20would%20like%20to%20know%20more!"
+  <div class="flex justify-center mt-16 mb-12 px-4">
+    <a href="https://wa.me/919845158656?text=Hi%2C%20I%20loved%20the%20pictures%20and%20would%20like%20to%20know%20more%20about%20your%20homestays!"
        target="_blank" rel="noopener noreferrer"
        class="inline-flex items-center gap-3 bg-green-600 hover:bg-green-700 text-white font-medium text-lg py-3 px-6 rounded-full shadow-lg transition-all duration-300"
        data-aos="zoom-in" data-aos-delay="200">
       <svg class="w-6 h-6 fill-white" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-	<path d="M16 0c-8.837 0-16 7.163-16 16 0 2.837 0.742 5.594 2.148 8.015l-2.148 7.985 8.206-2.156c2.315 1.252 4.923 1.922 7.794 1.922 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.563c-2.423 0-4.751-0.647-6.813-1.875l-0.486-0.281-4.875 1.281 1.313-4.766-0.302-0.491c-1.342-2.191-2.034-4.703-2.034-7.281 0-7.159 5.841-13 13-13s13 5.841 13 13c0 7.159-5.841 13-13 13zM22.719 19.313c-0.344-0.172-2.063-1.015-2.381-1.125-0.317-0.109-0.549-0.172-0.78 0.172-0.229 0.344-0.896 1.125-1.099 1.344-0.203 0.219-0.406 0.248-0.75 0.086-0.344-0.172-1.455-0.537-2.771-1.713-1.024-0.912-1.713-2.037-1.915-2.381-0.199-0.344-0.021-0.53 0.15-0.703 0.155-0.154 0.344-0.4 0.515-0.6 0.17-0.199 0.229-0.344 0.344-0.573 0.113-0.229 0.056-0.43-0.027-0.603-0.086-0.172-0.779-1.879-1.064-2.572-0.281-0.672-0.564-0.58-0.78-0.586-0.203-0.004-0.434-0.005-0.665-0.005s-0.603 0.086-0.919 0.43c-0.317 0.344-1.207 1.18-1.207 2.879s1.237 3.338 1.409 3.568c0.172 0.229 2.438 3.729 5.912 5.229 0.826 0.357 1.471 0.57 1.975 0.729 0.829 0.264 1.584 0.227 2.182 0.138 0.666-0.098 2.063-0.844 2.355-1.66 0.291-0.816 0.291-1.516 0.203-1.66-0.084-0.143-0.313-0.229-0.656-0.401z"/>
+        <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.837 0.742 5.594 2.148 8.015l-2.148 7.985 8.206-2.156c2.315 1.252 4.923 1.922 7.794 1.922 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.563c-2.423 0-4.751-0.647-6.813-1.875l-0.486-0.281-4.875 1.281 1.313-4.766-0.302-0.491c-1.342-2.191-2.034-4.703-2.034-7.281 0-7.159 5.841-13 13-13s13 5.841 13 13c0 7.159-5.841 13-13 13zM22.719 19.313c-0.344-0.172-2.063-1.015-2.381-1.125-0.317-0.109-0.549-0.172-0.78 0.172-0.229 0.344-0.896 1.125-1.099 1.344-0.203 0.219-0.406 0.248-0.75 0.086-0.344-0.172-1.455-0.537-2.771-1.713-1.024-0.912-1.713-2.037-1.915-2.381-0.199-0.344-0.021-0.53 0.15-0.703 0.155-0.154 0.344-0.4 0.515-0.6 0.17-0.199 0.229-0.344 0.344-0.573 0.113-0.229 0.056-0.43-0.027-0.603-0.086-0.172-0.779-1.879-1.064-2.572-0.281-0.672-0.564-0.58-0.78-0.586-0.203-0.004-0.434-0.005-0.665-0.005s-0.603 0.086-0.919 0.43c-0.317 0.344-1.207 1.18-1.207 2.879s1.237 3.338 1.409 3.568c0.172 0.229 2.438 3.729 5.912 5.229 0.826 0.357 1.471 0.57 1.975 0.729 0.829 0.264 1.584 0.227 2.182 0.138 0.666-0.098 2.063-0.844 2.355-1.66 0.291-0.816 0.291-1.516 0.203-1.66-0.084-0.143-0.313-0.229-0.656-0.401z"/>
       </svg>
       Message Us on WhatsApp
     </a>
   </div>
 
   <!-- Instagram Section -->
-  <section class="mt-24 mb-24 px-4">
+  <section class="mb-24 px-4">
     <h2 class="text-2xl md:text-3xl font-semibold text-center mb-6">Follow Us On Instagram</h2>
     <div class="flex justify-center max-w-screen-lg mx-auto">
       <script src="https://static.elfsight.com/platform/platform.js" async></script>
@@ -160,21 +232,16 @@
   <script>
     AOS.init();
 
-  fetch('header.html')
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById('header-container').innerHTML = html;
-
-      // Rebind the mobile menu toggle after injecting header
-      const menuToggle = document.getElementById('menu-toggle');
-      const mobileMenu = document.getElementById('mobile-menu');
-
-      if (menuToggle && mobileMenu) {
-	menuToggle.addEventListener('click', () => {
-	  mobileMenu.classList.toggle('hidden');
-	});
-      }
-    });
+    fetch('header.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('header-container').innerHTML = html;
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (menuToggle && mobileMenu) {
+          menuToggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        }
+      });
 
     fetch('footer.html')
       .then(res => res.text())
@@ -183,29 +250,42 @@
     function closeLightbox() {
       document.getElementById('lightbox').style.display = 'none';
     }
+
+    // Highlight the active tab based on scroll position
+    function setTab(name) {
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('href') === '#' + name);
+      });
+    }
+
+    // Auto-update tab on scroll
+    const innSection = document.getElementById('inn');
+    const neoSection = document.getElementById('neo');
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY + 120;
+      if (neoSection && scrollY >= neoSection.offsetTop) {
+        setTab('neo');
+      } else {
+        setTab('inn');
+      }
+    });
   </script>
   <script src="gallery.js" defer></script>
 
-  <!-- Floating Buttons -->
   <!-- Scroll to Top -->
   <button id="scrollToTopBtn"
     class="fixed bottom-5 left-5 z-50 bg-gray-800 text-white p-3 rounded-full shadow-md hover:bg-gray-700 transition duration-300 hidden"
     onclick="window.scrollTo({ top: 0, behavior: 'smooth' });"
-    aria-label="Scroll to top">
-    ↑
-  </button>
+    aria-label="Scroll to top">↑</button>
 
-
-  <!-- Scroll to Top Logic -->
   <script>
     const scrollBtn = document.getElementById('scrollToTopBtn');
     let lastScrollY = window.scrollY;
-
     window.addEventListener('scroll', () => {
       if (window.scrollY > 300 && window.scrollY < lastScrollY) {
-	scrollBtn.classList.remove('hidden');
+        scrollBtn.classList.remove('hidden');
       } else {
-	scrollBtn.classList.add('hidden');
+        scrollBtn.classList.add('hidden');
       }
       lastScrollY = window.scrollY;
     });
