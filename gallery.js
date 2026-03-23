@@ -60,8 +60,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     container.innerHTML = images.map((img, index) => `
       <div class="image-wrapper" data-aos="fade-up" data-aos-delay="${Math.min(index * 40, 400)}">
-        <img src="${img.src}" alt="${img.caption}" loading="lazy"
-          onclick="openLightbox('${img.src}', '${img.caption.replace(/'/g, '&apos;')}')" />
+        <div class="img-ratio">
+          <img src="${img.src}" alt="${img.caption}" loading="lazy"
+            onclick="openLightbox('${img.src}', '${img.caption.replace(/'/g, '&apos;')}')" />
+        </div>
         <div class="caption">${img.caption}</div>
       </div>
     `).join('');
