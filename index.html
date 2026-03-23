@@ -1,360 +1,478 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ichumma's Inn – Private Homestay in Wayanad, Kerala</title>
-    <meta name="description" content="A cozy private homestay in the green hills of Wayanad, Kerala. Experience nature, comfort, and Kerala heritage at Ichumma's Inn. Book your private escape today." />
-    <meta name="keywords" content="Ichumma's Inn, Wayanad, Kerala, Homestay, Private villa, Vacation stay, Nature retreat" />
-    <meta name="author" content="Ichumma's Inn" />
-    <link rel="canonical" href="https://ichummas.com/" />
-    <meta property="og:title" content="Ichumma's Inn – Private Homestay in Wayanad, Kerala" />
-    <meta property="og:description" content="A cozy private homestay nestled in the green hills of Wayanad, Kerala. Full-house bookings with pool, campfire & more." />
-    <meta property="og:image" content="https://ichummas.com/images/hero-arial.webp" />
-    <meta property="og:url" content="https://ichummas.com/" />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Ichumma's Inn – Private Homestay in Wayanad, Kerala" />
-    <meta name="twitter:description" content="A cozy private homestay nestled in the green hills of Wayanad, Kerala. Full-house bookings with pool, campfire & more." />
-    <meta name="twitter:image" content="https://ichummas.com/images/hero-arial.webp" />
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-    <style>
-      html, body {
-	max-width: 100%;
-	overflow-x: hidden;
-      .fade-slide {
-        position: absolute;
-        inset: 0;
-        opacity: 0;
-        filter: blur(8px);
-        transition: opacity 1s ease, filter 1s ease;
-      }
-      .fade-slide.active {
-        opacity: 1;
-        filter: blur(0);
-        z-index: 10;
-      }
-      .gallery-fade-slider {
-	position: relative;
-	width: 100%;
-	height: 100%;
-      }
-
-      .fade-slide-gallery {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	opacity: 0;
-	transition: opacity 1s ease;
-	border-radius: 0.5rem;
-      }
-
-      .fade-slide-gallery.active {
-	opacity: 1;
-	z-index: 10;
-      }
-    </style>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ichumma's Homestays – Two Private Villas in Wayanad, Kerala</title>
+  <meta name="description" content="Two exclusive private villas on a 5-acre estate in Wayanad, Kerala. Ichumma's Inn (3 beds, 15 guests) and Ichumma's Neo (4 beds, 25 guests). Full-house bookings only — no strangers, no shared spaces." />
+  <link rel="canonical" href="https://ichummas.com/" />
+  <meta property="og:title" content="Ichumma's Homestays – Two Private Villas in Wayanad, Kerala" />
+  <meta property="og:description" content="Two exclusive private villas on a 5-acre estate in Wayanad, Kerala. Full-house bookings — pool, campfire, BBQ and more." />
+  <meta property="og:image" content="https://ichummas.com/images/Neo/neo-pool-jungle-view.webp" />
+  <meta property="og:url" content="https://ichummas.com/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ichumma's Homestays – Two Private Villas in Wayanad, Kerala" />
+  <meta name="twitter:description" content="Two exclusive private villas on a 5-acre estate in Wayanad, Kerala. Full-house bookings — pool, campfire, BBQ and more." />
+  <meta name="twitter:image" content="https://ichummas.com/images/Neo/neo-pool-jungle-view.webp" />
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
 
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LodgingBusiness",
-  "name": "Ichumma's Inn",
-  "url": "https://ichummas.com/",
-  "logo": "https://ichummas.com/images/Ichummas%20logo%20-%20transparent.png",
-  "image": "https://ichummas.com/images/hero-arial.webp",
-  "description": "A private 3-bedroom homestay nestled in the green hills of Wayanad, Kerala. Full-house bookings with swimming pool, campfire, basketball court and more.",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Venmani, Shutter Mukh, Thalapuzha",
-    "addressLocality": "Wayanad",
-    "addressRegion": "Kerala",
-    "postalCode": "670644",
-    "addressCountry": "IN"
-  },
-  "telephone": "+919845158656",
-  "email": "ichummasinn@gmail.com",
-  "priceRange": "$$",
-  "amenityFeature": [
-    { "@type": "LocationFeatureSpecification", "name": "Swimming Pool", "value": true },
-    { "@type": "LocationFeatureSpecification", "name": "Basketball Court", "value": true },
-    { "@type": "LocationFeatureSpecification", "name": "Campfire", "value": true },
-    { "@type": "LocationFeatureSpecification", "name": "Free WiFi", "value": true },
-    { "@type": "LocationFeatureSpecification", "name": "Barbeque", "value": true }
-  ],
-  "numberOfRooms": 3,
-  "checkinTime": "14:00",
-  "checkoutTime": "11:00",
-  "sameAs": [
-    "https://www.airbnb.co.uk/rooms/23329072"
-  ]
-}
-</script>
-  </head>
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K79DQK08K3"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-K79DQK08K3');
+  {
+    "@context": "https://schema.org",
+    "@type": "LodgingBusiness",
+    "name": "Ichumma's Homestays",
+    "url": "https://ichummas.com/",
+    "logo": "https://ichummas.com/images/Ichummas%20logo%20-%20transparent.png",
+    "image": "https://ichummas.com/images/Neo/neo-pool-jungle-view.webp",
+    "description": "Two exclusive private villas on a 5-acre estate in Wayanad, Kerala. Ichumma's Inn (3 bedrooms, 15 guests) and Ichumma's Neo (4 bedrooms, 25 guests). Full-house bookings only.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Venmani, Shutter Mukh, Thalapuzha",
+      "addressLocality": "Wayanad",
+      "addressRegion": "Kerala",
+      "postalCode": "670644",
+      "addressCountry": "IN"
+    },
+    "telephone": "+919845158656",
+    "email": "ichummasinn@gmail.com",
+    "priceRange": "$$",
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "Swimming Pool", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Campfire", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Barbeque", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Free WiFi", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Basketball Court", "value": true }
+    ],
+    "sameAs": [
+      "https://www.airbnb.co.uk/rooms/23329072",
+      "https://www.airbnb.co.uk/rooms/1531066307044582330",
+      "https://www.instagram.com/ichummas"
+    ]
+  }
   </script>
 
-  <body class="bg-white text-gray-800 font-sans overflow-x-hidden">
-    <!-- Header Loader -->
-    <div id="header-placeholder"></div>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <script>
-      fetch('header.html')
-        .then(res => res.text())
-        .then(data => {
-          document.getElementById('header-placeholder').innerHTML = data;
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3, .serif { font-family: 'Playfair Display', serif; }
 
-          const menuToggle = document.getElementById('menu-toggle');
-          const mobileMenu = document.getElementById('mobile-menu');
+    /* Hero crossfade */
+    .hero-slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 1.4s ease;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+    .hero-slide.active { opacity: 1; }
 
-          if (menuToggle && mobileMenu) {
-            menuToggle.addEventListener('click', () => {
-              mobileMenu.classList.toggle('hidden');
-            });
-          }
-        });
-    </script>
+    /* Photo strip */
+    .strip-track {
+      display: flex;
+      gap: 12px;
+      animation: scrollStrip 40s linear infinite;
+      width: max-content;
+    }
+    .strip-track:hover { animation-play-state: paused; }
+    @keyframes scrollStrip {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .strip-img {
+      width: 280px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      flex-shrink: 0;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .strip-img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+    }
 
-    <!-- Hero Section with Blur Transition -->
-    <section class="relative w-full h-[80vh] overflow-hidden text-white">
-      <!-- Images -->
-      <div class="absolute inset-0">
-        <img src="images/hero-arial.webp" alt="Arial View of Ichumma's Inn" class="fade-slide active object-cover w-full h-full" />
-        <img src="images/hero-back.webp" alt="Back View" class="fade-slide object-cover w-full h-full" />
-        <img src="images/hero-dining-landscape.webp" alt="Dining Area" class="fade-slide object-cover w-full h-full" />
-        <img src="images/hero-bedroom.webp" alt="Bedroom Interior" class="fade-slide object-cover w-full h-full" />
-        <img src="images/hero-dining.webp" alt="Dining Room" class="fade-slide object-cover w-full h-full" />
-      </div>
+    /* Villa cards */
+    .villa-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 1.25rem;
+      cursor: pointer;
+    }
+    .villa-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s ease;
+    }
+    .villa-card:hover img { transform: scale(1.05); }
+    .villa-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.1) 60%, transparent 100%);
+    }
+  </style>
+</head>
 
-      <!-- Overlay Content -->
-      <div class="relative z-20 h-full flex flex-col items-center justify-center bg-black/40 text-center px-4">
-        <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Ichumma's Inn – Private Homestay in Wayanad, Kerala</h1>
-        <p class="text-lg md:text-xl max-w-2xl mb-6">
-          A peaceful getaway in the green hills of Wayanad. Feel at home surrounded by nature and Kerala’s rich traditions.
-        </p>
-        <a href="availability.html" class="inline-block bg-white text-teal-700 font-semibold px-6 py-3 rounded-full hover:bg-gray-100 transition duration-300">
-          Book Your Stay
+<!-- Google tag -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K79DQK08K3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-K79DQK08K3');
+</script>
+
+<body class="bg-white text-gray-800 overflow-x-hidden">
+
+  <!-- Header -->
+  <div id="header-placeholder"></div>
+  <script>
+    fetch('header.html')
+      .then(r => r.text())
+      .then(html => {
+        document.getElementById('header-placeholder').innerHTML = html;
+        const t = document.getElementById('menu-toggle');
+        const m = document.getElementById('mobile-menu');
+        if (t && m) t.addEventListener('click', () => m.classList.toggle('hidden'));
+      });
+  </script>
+
+  <!-- ═══════════════════════════════════════════════════
+       SECTION 1 — HERO
+  ═══════════════════════════════════════════════════ -->
+  <section class="relative w-full h-screen overflow-hidden text-white">
+    <!-- Crossfade images -->
+    <div class="absolute inset-0">
+      <img src="images/Neo/neo-pool-jungle-view.webp"  alt="Private pool with jungle view at Ichumma's Neo, Wayanad" class="hero-slide active" loading="eager" />
+      <img src="images/hero-arial.webp"                alt="Aerial view of Ichumma's Inn, Wayanad"                  class="hero-slide" loading="lazy" />
+      <img src="images/Neo/neo-hero.webp"              alt="Ichumma's Neo exterior, modern villa in Wayanad"         class="hero-slide" loading="lazy" />
+      <img src="images/Neo/neo-terrace-rattan-seating.webp" alt="Outdoor terrace at Ichumma's Neo"                  class="hero-slide" loading="lazy" />
+      <img src="images/hero-back.webp"                 alt="Backyard and pool at Ichumma's Inn, Wayanad"             class="hero-slide" loading="lazy" />
+    </div>
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black/50"></div>
+    <!-- Content -->
+    <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
+      <p class="text-xs md:text-sm uppercase tracking-[0.3em] text-teal-300 font-medium mb-4">Wayanad, Kerala</p>
+      <h1 class="serif text-4xl md:text-6xl lg:text-7xl font-bold mb-5 leading-tight drop-shadow-xl max-w-4xl">
+        Two Private Villas.<br />Exclusively Yours.
+      </h1>
+      <p class="text-base md:text-lg text-gray-200 max-w-xl mb-10 leading-relaxed">
+        No strangers. No shared spaces.<br class="hidden md:block" />Just your group, on a private 5-acre estate.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="#inn" class="bg-white text-teal-800 font-semibold px-7 py-3 rounded-full hover:bg-gray-100 transition duration-300 shadow-lg">
+          Ichumma's Inn ↓
+        </a>
+        <a href="#neo" class="border-2 border-white text-white font-semibold px-7 py-3 rounded-full hover:bg-white hover:text-teal-800 transition duration-300">
+          Ichumma's Neo ↓
         </a>
       </div>
-    </section>
-
-    <section class="bg-gray-100 py-16 px-4">
-      <!-- Elfsight Google Reviews | Untitled Google Reviews -->
-      <script src="https://static.elfsight.com/platform/platform.js" async></script>
-      <div class="elfsight-app-2b8e24f7-30e9-4333-ab45-254dd4e5fcc8" data-elfsight-app-lazy></div>
-    </section>
-
-  <!-- Video Showcase Section -->
-  <section class="bg-gray-50 text-gray-800 py-20 px-4">
-    <div class="max-w-6xl mx-auto text-center">
-      <h2 class="text-3xl md:text-4xl font-bold text-teal-700 mb-6">A Glimpse Into Ichumma's Inn</h2>
-      <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-	Watch the space come alive through sights and sounds — from cozy corners to serene surroundings.
-      </p>
-      <div class="relative rounded-xl overflow-hidden shadow-xl max-w-5xl mx-auto" style="padding-top: 56.25%;">
-	<iframe class="absolute top-0 left-0 w-full h-full"
-	  src="https://www.youtube.com/embed/_cBz6pdANmA?rel=0&modestbranding=1&showinfo=0"
-	  title="Ichumma's Inn Walkthrough Video"
-	  frameborder="0"
-	  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-	  allowfullscreen>
-	</iframe>
-      </div>
     </div>
-
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
+      <svg class="w-6 h-6 text-white opacity-70" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+      </svg>
+    </div>
   </section>
 
-  <!-- Explore Ichumma's Inn Section -->
-  <section class="bg-white-500 pt-20 pb-4 md:pb-20 px-4">
+  <!-- ═══════════════════════════════════════════════════
+       SECTION 2 — ESTATE STRIP
+  ═══════════════════════════════════════════════════ -->
+  <section class="bg-teal-900 text-white py-5 px-4 text-center">
+    <p class="text-sm md:text-base font-medium tracking-wide">
+      🌿 Both villas share a <strong>private 5-acre estate</strong> in the Western Ghats &nbsp;·&nbsp;
+      <a href="https://ichummas.com/map" target="_blank" class="underline underline-offset-2 hover:text-teal-200 transition">View Location</a>
+    </p>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       SECTION 3 — CHOOSE YOUR VILLA
+  ═══════════════════════════════════════════════════ -->
+  <section class="py-20 px-4 bg-gray-50">
     <div class="max-w-6xl mx-auto">
-      <h2 class="text-3xl md:text-4xl font-bold text-center text-teal-700 mb-16" data-aos="zoom-in">
-	Explore Ichumma's Inn
-      </h2>
+      <p class="text-center text-xs uppercase tracking-[0.25em] text-gray-400 font-semibold mb-3">Choose Your Villa</p>
+      <h2 class="serif text-3xl md:text-4xl font-bold text-center text-gray-800 mb-14">Two Villas, One Estate</h2>
 
-      <!-- About -->
-      <div class="grid md:grid-cols-2 gap-8 items-center mb-16" data-aos="fade-right">
-	<img src="images/hero-arial.webp" alt="Ichumma's Inn Aerial View" class="rounded-lg shadow-md w-full transform transition-transform duration-500 hover:scale-105" loading="lazy" />
-	<div class="text-center md:text-left">
-	  <h3 class="text-2xl font-semibold text-teal-700 mb-2 inline-flex items-center gap-2">
-	    <svg class="w-6 h-6 text-teal-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-	      <path d="M12 2L2 7l10 5 10-5-10-5zm0 13l-10-5v6l10 5 10-5v-6l-10 5z" />
-	    </svg>
-	    About
-	  </h3>
-	  <p class="text-gray-700 mb-4">
-	    Ichumma’s Inn is a private homestay nestled in the green hills of Wayanad, designed by award-winning Humming Tree Architects. With a serene swimming pool, campfire, basketball court, and Kerala cuisine, it offers full privacy in a single-house stay.
-	  </p>
-	  <a href="about.html" class="text-teal-600 font-semibold hover:underline">Read More →</a>
-	</div>
-      </div>
+      <div class="grid md:grid-cols-2 gap-8">
 
-      <!-- Rooms -->
-      <div class="grid md:grid-cols-2 gap-8 items-center mb-16 md:flex-row-reverse" data-aos="fade-left">
-	<img src="images/bedroom1-cot-view.webp" alt="Cozy Bedroom" class="rounded-lg shadow-md w-full md:order-2 transform transition-transform duration-500 hover:scale-105" loading="lazy" />
-	<div class="md:order-1 text-center md:text-left">
-	  <h3 class="text-2xl font-semibold text-teal-700 mb-2 inline-flex items-center gap-2">
-	    <svg class="w-6 h-6 text-teal-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-	      <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0h4" />
-	    </svg>
-	    Rooms
-	  </h3>
-	  <p class="text-gray-700 mb-4">
-	    Our rooms are designed with comfort and simplicity in mind — airy, spacious, and connected with nature. Whether you're a couple or a family, our 3-bedroom villa offers warm lighting, woodwork, and relaxing ambiance.
-	  </p>
-	  <a href="rooms.html" class="text-teal-600 font-semibold hover:underline">View Rooms →</a>
-	</div>
-      </div>
+        <!-- INN CARD -->
+        <div id="inn" class="villa-card h-[520px] shadow-2xl" data-aos="fade-right">
+          <img src="images/hero-arial.webp" alt="Ichumma's Inn – aerial view, Wayanad" />
+          <div class="villa-card-overlay"></div>
+          <div class="absolute inset-0 flex flex-col justify-between p-7">
+            <!-- Top: logo + badge -->
+            <div class="flex items-start justify-between">
+              <img src="images/ichummas-logo-transparent.png" alt="Ichumma's Inn logo" class="h-12 w-auto object-contain drop-shadow-lg" />
+              <span class="bg-white/20 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full border border-white/30">
+                Full House · Exclusive
+              </span>
+            </div>
+            <!-- Bottom: details + CTA -->
+            <div>
+              <h3 class="serif text-2xl md:text-3xl font-bold text-white mb-1">Ichumma's Inn</h3>
+              <p class="text-teal-200 text-sm mb-3">3 Bedrooms · Up to 15 Guests · Private Pool · 1 Floor</p>
+              <div class="flex flex-wrap gap-2 mb-5">
+                <span class="bg-white/15 text-white text-xs px-3 py-1 rounded-full">🏊 Pool</span>
+                <span class="bg-white/15 text-white text-xs px-3 py-1 rounded-full">🔥 Campfire</span>
+                <span class="bg-white/15 text-white text-xs px-3 py-1 rounded-full">🏀 Basketball</span>
+                <span class="bg-white/15 text-white text-xs px-3 py-1 rounded-full">🍳 Kerala Meals</span>
+              </div>
+              <div class="flex items-center gap-3 flex-wrap">
+                <a href="info.html#inn" class="bg-white text-teal-800 font-semibold text-sm px-5 py-2.5 rounded-full hover:bg-teal-50 transition duration-300">
+                  Explore Inn →
+                </a>
+                <a href="https://www.airbnb.co.uk/rooms/23329072" target="_blank"
+                  class="border border-white text-white text-sm font-medium px-5 py-2.5 rounded-full hover:bg-white/10 transition duration-300">
+                  Book on Airbnb
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
 
-      <!-- Availability -->
-      <div class="grid md:grid-cols-2 gap-8 items-center mb-16" data-aos="fade-right">
-	<img src="images/ichummas-inn.webp" alt="Availability Calendar" class="rounded-lg shadow-md w-full transform transition-transform duration-500 hover:scale-105" loading="lazy" />
-	<div class="text-center md:text-left">
-	  <h3 class="text-2xl font-semibold text-teal-700 mb-2 inline-flex items-center gap-2">
-	    <svg class="w-6 h-6 text-teal-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-	      <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-	    </svg>
-	    Availability
-	  </h3>
-	  <p class="text-gray-700 mb-4">
-	    Reserve the entire property for your group. Check available dates and plan your peaceful getaway with ease. Our calendar helps you lock your slot with clarity and convenience.
-	  </p>
-	  <a href="availability.html" class="text-teal-600 font-semibold hover:underline">Check Dates →</a>
-	</div>
-      </div>
+        <!-- NEO CARD -->
+        <div id="neo" class="villa-card h-[520px] shadow-2xl" data-aos="fade-left">
+          <img src="images/Neo/neo-pool-jungle-view.webp" alt="Ichumma's Neo – pool with jungle view, Wayanad" />
+          <div class="villa-card-overlay"></div>
+          <div class="absolute inset-0 flex flex-col justify-between p-7">
+            <!-- Top: logo + badge -->
+            <div class="flex items-start justify-between">
+              <img src="images/ichummas-neo-logo-transparent.png" alt="Ichumma's Neo logo" class="h-12 w-auto object-contain drop-shadow-lg" />
+              <span class="bg-teal-500/80 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full border border-teal-300/40">
+                New · Introductory Price
+              </span>
+            </div>
+            <!-- Bottom: details + CTA -->
+            <div>
+              <h3 class="serif text-2xl md:text-3xl font-bold text-white mb-1">Ichumma's Neo</h3>
+              <p class="text-teal-200 text-sm mb-3">4 Bedrooms · Up to 25 Guests · Private Pool · 2 Floors</p>
+              <div class="flex flex-wrap gap-2 mb-5">
+                <span class="bg-white/15 text-white text-xs px-3 py-1 rounded-full">🏊 Private Pool</span>
+                <span class="bg-white/15 text-white text-xs px-3 py-1 rounded-full">🔥 BBQ & Campfire</span>
+                <span class="bg-white/15 text-white text-xs px-3 py-1 rounded-full">🏓 Games Room</span>
+                <span class="bg-white/15 text-white text-xs px-3 py-1 rounded-full">🍳 Kerala Meals</span>
+              </div>
+              <div class="flex items-center gap-3 flex-wrap">
+                <a href="info.html#neo" class="bg-white text-teal-800 font-semibold text-sm px-5 py-2.5 rounded-full hover:bg-teal-50 transition duration-300">
+                  Explore Neo →
+                </a>
+                <a href="https://www.airbnb.co.uk/rooms/1531066307044582330" target="_blank"
+                  class="border border-white text-white text-sm font-medium px-5 py-2.5 rounded-full hover:bg-white/10 transition duration-300">
+                  Book on Airbnb
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
 
-      <!-- Gallery -->
-      <div class="grid md:grid-cols-2 gap-8 items-center mb-16" data-aos="fade-left">
-	<div class="relative w-full h-[520px] overflow-hidden rounded-lg shadow-md order-1 md:order-2 transform transition-transform duration-500 hover:scale-105">
-	  <div class="gallery-fade-slider absolute inset-0">
-	    <img src="images/hero-dining-landscape.webp" class="fade-slide-gallery active" alt="Dining Area" />
-	    <img src="images/bedroom1-cot-view.webp" class="fade-slide-gallery" alt="Bedroom View" />
-	    <img src="images/hall-chair-view.webp" class="fade-slide-gallery" alt="Hall View" />
-	    <img src="images/ichummas-inn.webp" class="fade-slide-gallery" alt="Ichumma's Inn Front" />
-	  </div>
-	</div>
-	<div class="order-2 md:order-1 text-center md:text-left">
-	  <h3 class="text-2xl font-semibold text-teal-700 mb-2 inline-flex items-center gap-2">
-	    <svg class="w-6 h-6 text-teal-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-	      <path d="M4 6h16M4 12h16M4 18h16" />
-	    </svg>
-	    Gallery
-	  </h3>
-	  <p class="text-gray-700 mb-4">
-	    Browse through snapshots of Ichumma’s Inn — from cozy bedrooms and welcoming halls to serene poolside views.
-	    Discover the charm of Kerala’s hospitality captured in moments.
-	  </p>
-	  <a href="gallery.html" class="text-teal-600 font-semibold hover:underline">View Photos →</a>
-	</div>
-      </div>
-
-      <!-- Contact -->
-      <div class="grid md:grid-cols-2 gap-8 items-center mb-16" data-aos="fade-right">
-	<img src="images/hall-chair-view.webp" alt="Contact Us" class="rounded-lg shadow-md w-full transform transition-transform duration-500 hover:scale-105" loading="lazy" />
-	<div class="text-center md:text-left">
-	  <h3 class="text-2xl font-semibold text-teal-700 mb-2 inline-flex items-center gap-2">
-	    <svg class="w-6 h-6 text-teal-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-	      <path d="M3 5h18M9 3v2m6-2v2M3 10h18M3 15h18M3 20h18" />
-	    </svg>
-	    Contact
-	  </h3>
-	  <p class="text-gray-700 mb-4">
-	    Questions or special requests? Reach out to us directly — we’re happy to help you with bookings, directions, or custom experiences. Or send a WhatsApp message instantly.
-	  </p>
-	  <a href="contact.html" class="text-teal-600 font-semibold hover:underline">Get in Touch →</a>
-	</div>
-      </div>
-
-      <!-- WhatsApp Button -->
-      <div class="text-center my-8 pt-16 pb-16 bg-gray-50" data-aos="zoom-in">
-	<a href="https://wa.me/919845158656?text=Hi%2C%20I%20am%20interested%20in%20Ichumma's%20Inn"
-	  target="_blank"
-	  class="inline-block bg-green-600 hover:bg-green-700 text-white text-lg font-semibold px-6 py-3 rounded-full shadow-lg transition">
-	  Message Us on WhatsApp
-	</a>
       </div>
     </div>
   </section>
 
-  <!-- Instagram Section -->
-  <section class="mb-14 px-4 pt-0 bg-white-100">
-    <h2 class="text-2xl md:text-3xl font-semibold text-center mb-6">Follow Us On Instagram</h2>
+  <!-- ═══════════════════════════════════════════════════
+       SECTION 4 — TRUST SIGNALS
+  ═══════════════════════════════════════════════════ -->
+  <section class="py-16 px-4 bg-white" data-aos="fade-up">
+    <div class="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div>
+        <p class="text-3xl font-bold text-teal-700 serif">5</p>
+        <p class="text-sm text-gray-500 mt-1">Acres of Private Estate</p>
+      </div>
+      <div>
+        <p class="text-3xl font-bold text-teal-700 serif">40+</p>
+        <p class="text-sm text-gray-500 mt-1">Guests Capacity</p>
+      </div>
+      <div>
+        <p class="text-3xl font-bold text-teal-700 serif">2</p>
+        <p class="text-sm text-gray-500 mt-1">Private Villas</p>
+      </div>
+      <div>
+        <p class="text-3xl font-bold text-teal-700 serif">100%</p>
+        <p class="text-sm text-gray-500 mt-1">Full-House Exclusive</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       SECTION 5 — GOOGLE REVIEWS
+  ═══════════════════════════════════════════════════ -->
+  <section class="bg-gray-50 py-16 px-4">
+    <script src="https://static.elfsight.com/platform/platform.js" async></script>
+    <div class="elfsight-app-2b8e24f7-30e9-4333-ab45-254dd4e5fcc8" data-elfsight-app-lazy></div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       SECTION 6 — PHOTO STRIP
+  ═══════════════════════════════════════════════════ -->
+  <section class="py-16 bg-white overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 mb-8 flex items-end justify-between">
+      <div>
+        <p class="text-xs uppercase tracking-[0.25em] text-gray-400 font-semibold mb-1">Both Villas</p>
+        <h2 class="serif text-2xl md:text-3xl font-bold text-gray-800">A Glimpse of the Estate</h2>
+      </div>
+      <a href="gallery.html" class="text-sm text-teal-700 font-semibold hover:underline">View Full Gallery →</a>
+    </div>
+    <div class="overflow-hidden">
+      <div class="strip-track">
+        <!-- Doubled for seamless loop -->
+        <img src="images/Neo/neo-pool-jungle-view.webp"        class="strip-img" alt="Neo pool with jungle"         onclick="location.href='gallery.html#neo'" />
+        <img src="images/hero-arial.webp"                      class="strip-img" alt="Inn aerial view"               onclick="location.href='gallery.html#inn'" />
+        <img src="images/Neo/neo-terrace-rattan-seating.webp"  class="strip-img" alt="Neo outdoor terrace"           onclick="location.href='gallery.html#neo'" />
+        <img src="images/hero-back.webp"                       class="strip-img" alt="Inn backyard"                   onclick="location.href='gallery.html#inn'" />
+        <img src="images/Neo/neo-living-room-teal-sofa.webp"   class="strip-img" alt="Neo living room"               onclick="location.href='gallery.html#neo'" />
+        <img src="images/bedroom1-cot-view.webp"               class="strip-img" alt="Inn bedroom"                    onclick="location.href='gallery.html#inn'" />
+        <img src="images/Neo/neo-dining-table-stone-wall.webp" class="strip-img" alt="Neo dining area"               onclick="location.href='gallery.html#neo'" />
+        <img src="images/Neo/neo-pool-jacuzzi-daytime.webp"    class="strip-img" alt="Neo pool jacuzzi"              onclick="location.href='gallery.html#neo'" />
+        <!-- Duplicate for seamless loop -->
+        <img src="images/Neo/neo-pool-jungle-view.webp"        class="strip-img" alt="Neo pool with jungle"         onclick="location.href='gallery.html#neo'" />
+        <img src="images/hero-arial.webp"                      class="strip-img" alt="Inn aerial view"               onclick="location.href='gallery.html#inn'" />
+        <img src="images/Neo/neo-terrace-rattan-seating.webp"  class="strip-img" alt="Neo outdoor terrace"           onclick="location.href='gallery.html#neo'" />
+        <img src="images/hero-back.webp"                       class="strip-img" alt="Inn backyard"                   onclick="location.href='gallery.html#inn'" />
+        <img src="images/Neo/neo-living-room-teal-sofa.webp"   class="strip-img" alt="Neo living room"               onclick="location.href='gallery.html#neo'" />
+        <img src="images/bedroom1-cot-view.webp"               class="strip-img" alt="Inn bedroom"                    onclick="location.href='gallery.html#inn'" />
+        <img src="images/Neo/neo-dining-table-stone-wall.webp" class="strip-img" alt="Neo dining area"               onclick="location.href='gallery.html#neo'" />
+        <img src="images/Neo/neo-pool-jacuzzi-daytime.webp"    class="strip-img" alt="Neo pool jacuzzi"              onclick="location.href='gallery.html#neo'" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       SECTION 7 — VIDEOS
+  ═══════════════════════════════════════════════════ -->
+  <section class="py-20 px-4 bg-gray-50">
+    <div class="max-w-6xl mx-auto">
+      <p class="text-center text-xs uppercase tracking-[0.25em] text-gray-400 font-semibold mb-3">See It Live</p>
+      <h2 class="serif text-3xl md:text-4xl font-bold text-center text-gray-800 mb-14">Walk Through Our Villas</h2>
+      <div class="grid md:grid-cols-2 gap-10">
+        <!-- Inn video -->
+        <div data-aos="fade-right">
+          <div class="flex items-center gap-3 mb-4">
+            <img src="images/ichummas-logo-transparent.png" alt="Inn" class="h-10 w-auto object-contain" />
+            <div>
+              <p class="font-semibold text-gray-800">Ichumma's Inn</p>
+              <p class="text-xs text-gray-400">3 Bedrooms · Heritage Style</p>
+            </div>
+          </div>
+          <div class="relative rounded-xl overflow-hidden shadow-xl" style="padding-top:56.25%;">
+            <iframe class="absolute top-0 left-0 w-full h-full"
+              src="https://www.youtube.com/embed/_cBz6pdANmA?rel=0&modestbranding=1"
+              title="Ichumma's Inn Walkthrough"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+        <!-- Neo videos -->
+        <div data-aos="fade-left">
+          <div class="flex items-center gap-3 mb-4">
+            <img src="images/ichummas-neo-logo-transparent.png" alt="Neo" class="h-10 w-auto object-contain" />
+            <div>
+              <p class="font-semibold text-gray-800">Ichumma's Neo</p>
+              <p class="text-xs text-gray-400">4 Bedrooms · Modern · 2 Floors</p>
+            </div>
+          </div>
+          <div class="relative rounded-xl overflow-hidden shadow-xl" style="padding-top:56.25%;">
+            <video class="absolute top-0 left-0 w-full h-full object-cover" controls preload="none"
+              poster="images/Neo/neo-pool-jungle-view.webp">
+              <source src="images/Neo/neo-walkthrough-1.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       SECTION 8 — CTA BANNER
+  ═══════════════════════════════════════════════════ -->
+  <section class="relative py-24 px-4 overflow-hidden text-white text-center">
+    <img src="images/Neo/neo-terrace-open-sky.webp" alt="Terrace under open sky" class="absolute inset-0 w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-teal-900/75"></div>
+    <div class="relative z-10 max-w-2xl mx-auto" data-aos="zoom-in">
+      <h2 class="serif text-3xl md:text-4xl font-bold mb-4">Ready to Book Your Escape?</h2>
+      <p class="text-gray-200 mb-8 text-base">Check live availability for both villas and lock in your dates.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="availability.html"
+          class="bg-white text-teal-800 font-semibold px-8 py-3 rounded-full hover:bg-gray-100 transition duration-300 shadow-lg">
+          Check Availability
+        </a>
+        <a href="https://wa.me/919845158656?text=Hi%2C%20I%20am%20interested%20in%20booking%20one%20of%20your%20villas"
+          target="_blank"
+          class="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold px-8 py-3 rounded-full transition duration-300">
+          <svg class="w-5 h-5 fill-white" viewBox="0 0 32 32"><path d="M16 0c-8.837 0-16 7.163-16 16 0 2.837 0.742 5.594 2.148 8.015l-2.148 7.985 8.206-2.156c2.315 1.252 4.923 1.922 7.794 1.922 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.563c-2.423 0-4.751-0.647-6.813-1.875l-0.486-0.281-4.875 1.281 1.313-4.766-0.302-0.491c-1.342-2.191-2.034-4.703-2.034-7.281 0-7.159 5.841-13 13-13s13 5.841 13 13c0 7.159-5.841 13-13 13zM22.719 19.313c-0.344-0.172-2.063-1.015-2.381-1.125-0.317-0.109-0.549-0.172-0.78 0.172-0.229 0.344-0.896 1.125-1.099 1.344-0.203 0.219-0.406 0.248-0.75 0.086-0.344-0.172-1.455-0.537-2.771-1.713-1.024-0.912-1.713-2.037-1.915-2.381-0.199-0.344-0.021-0.53 0.15-0.703 0.155-0.154 0.344-0.4 0.515-0.6 0.17-0.199 0.229-0.344 0.344-0.573 0.113-0.229 0.056-0.43-0.027-0.603-0.086-0.172-0.779-1.879-1.064-2.572-0.281-0.672-0.564-0.58-0.78-0.586-0.203-0.004-0.434-0.005-0.665-0.005s-0.603 0.086-0.919 0.43c-0.317 0.344-1.207 1.18-1.207 2.879s1.237 3.338 1.409 3.568c0.172 0.229 2.438 3.729 5.912 5.229 0.826 0.357 1.471 0.57 1.975 0.729 0.829 0.264 1.584 0.227 2.182 0.138 0.666-0.098 2.063-0.844 2.355-1.66 0.291-0.816 0.291-1.516 0.203-1.66-0.084-0.143-0.313-0.229-0.656-0.401z"/></svg>
+          WhatsApp Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       SECTION 9 — INSTAGRAM
+  ═══════════════════════════════════════════════════ -->
+  <section class="py-16 px-4 bg-white">
+    <h2 class="serif text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8">Follow Us On Instagram</h2>
     <div class="flex justify-center max-w-screen-lg mx-auto">
       <script src="https://static.elfsight.com/platform/platform.js" async></script>
       <div class="elfsight-app-6783179b-78f6-41c2-8801-f133b93f4c93" data-elfsight-app-lazy></div>
     </div>
+    <div class="flex justify-center mt-6">
+      <a href="https://www.instagram.com/ichummas" target="_blank" rel="noopener noreferrer"
+        class="inline-flex items-center gap-3 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 text-white font-semibold text-sm px-6 py-3 rounded-full shadow-md hover:opacity-90 transition duration-300">
+        <svg class="w-5 h-5 fill-white flex-shrink-0" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        @ichummas on Instagram
+      </a>
+    </div>
   </section>
 
-    <!-- Footer Loader -->
-    <div id="footer-placeholder"></div>
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('footer.html')
+      .then(r => r.text())
+      .then(html => document.getElementById('footer-placeholder').innerHTML = html);
+  </script>
 
-    <script>
-      fetch('footer.html')
-        .then(res => res.text())
-        .then(data => {
-          document.getElementById('footer-placeholder').innerHTML = data;
-        });
+  <!-- Scroll to Top -->
+  <button id="scrollToTopBtn"
+    class="fixed bottom-5 left-5 z-50 bg-gray-800 text-white p-3 rounded-full shadow-md hover:bg-gray-700 transition duration-300 hidden"
+    onclick="window.scrollTo({ top: 0, behavior: 'smooth' });"
+    aria-label="Scroll to top">↑</button>
 
-      const slides = document.querySelectorAll('.fade-slide');
-      let currentIndex = 0;
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true, easing: 'ease-in-out' });
 
-      setInterval(() => {
-        slides[currentIndex].classList.remove('active');
-        currentIndex = (currentIndex + 1) % slides.length;
-        slides[currentIndex].classList.add('active');
-      }, 4000);
-    </script>
+    // Hero crossfade
+    const heroSlides = document.querySelectorAll('.hero-slide');
+    let heroIndex = 0;
+    setInterval(() => {
+      heroSlides[heroIndex].classList.remove('active');
+      heroIndex = (heroIndex + 1) % heroSlides.length;
+      heroSlides[heroIndex].classList.add('active');
+    }, 5000);
 
-    <!-- Floating Scroll to Top Button -->
-    <button id="scrollToTopBtn"
-      class="fixed bottom-5 left-5 z-50 bg-gray-800 text-white p-3 rounded-full shadow-md hover:bg-gray-700 transition duration-300 hidden"
-      onclick="window.scrollTo({ top: 0, behavior: 'smooth' });"
-      aria-label="Scroll to top">
-      ↑
-    </button>
-
-
-    <script>
-      const scrollBtn = document.getElementById('scrollToTopBtn');
-      let lastScrollY = window.scrollY;
-
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > 300 && window.scrollY < lastScrollY) {
-          scrollBtn.classList.remove('hidden');
-        } else {
-          scrollBtn.classList.add('hidden');
-        }
-        lastScrollY = window.scrollY;
-      });
-    </script>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init({
-	duration: 800,       // animation duration in ms
-	once: true,          // whether animation should happen only once
-	easing: 'ease-in-out'
-      });
-    </script>
-    <script>
-      const fadeImages = document.querySelectorAll('.fade-slide-gallery');
-      let fadeIndex = 0;
-
-      setInterval(() => {
-	fadeImages[fadeIndex].classList.remove('active');
-	fadeIndex = (fadeIndex + 1) % fadeImages.length;
-	fadeImages[fadeIndex].classList.add('active');
-      }, 4000); // 4s duration
-    </script>
-  </body>
+    // Scroll to top
+    const scrollBtn = document.getElementById('scrollToTopBtn');
+    let lastScrollY = window.scrollY;
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300 && window.scrollY < lastScrollY) {
+        scrollBtn.classList.remove('hidden');
+      } else {
+        scrollBtn.classList.add('hidden');
+      }
+      lastScrollY = window.scrollY;
+    });
+  </script>
+</body>
 </html>
