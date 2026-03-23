@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ── Ichumma's Neo images ──────────────────────────────────────────────────
   const neoImages = [
+    { src: 'images/Neo/neo-hero.webp',                      caption: "Ichumma's Neo – exterior view" },
     { src: 'images/Neo/neo-pool-jungle-view.webp',          caption: 'Private pool with jungle view' },
     { src: 'images/Neo/neo-pool-jacuzzi-daytime.webp',      caption: 'Pool with jacuzzi step' },
     { src: 'images/Neo/neo-entrance-porch.webp',            caption: 'Main entrance porch' },
